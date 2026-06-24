@@ -9,7 +9,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   ogImage: "/og-image.png",
   /** Public path to the downloadable CV. Replace the file to update the resume. */
-  resumeUrl: "/resume/Manikanta-Handral-CV.pdf",
+  resumeUrl: "/resume/Manikanta_Engalligi_Cv.pdf",
   email: "manikantahandral@gmail.com",
   location: "Leipzig, Germany",
   author: {
