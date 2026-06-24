@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "title": "Manikanta — Portfolio",
+    "description": "Persönliches Portfolio von Manikanta — Softwareentwickler für moderne, performante Web-Erlebnisse.",
+    "keywords": "Portfolio, Softwareentwickler, Webentwickler, Next.js, TypeScript, React"
+  },
+  "nav": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "projects": "Projekte",
+    "experience": "Erfahrung",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "greeting": "Hallo, ich bin Manikanta",
+    "tagline": "Ich entwickle moderne, performante Web-Erlebnisse."
+  },
+  "common": {
+    "language": "Sprache",
+    "theme": "Erscheinungsbild",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System",
+    "toggleTheme": "Erscheinungsbild umschalten"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "backHome": "Zurück zur Startseite"
+  }
+}

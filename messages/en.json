@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "title": "Manikanta — Portfolio",
+    "description": "Personal portfolio of Manikanta — software engineer building modern, performant web experiences.",
+    "keywords": "portfolio, software engineer, web developer, Next.js, TypeScript, React"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hi, I'm Manikanta",
+    "tagline": "I build modern, performant web experiences."
+  },
+  "common": {
+    "language": "Language",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "toggleTheme": "Toggle theme"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for doesn't exist or has been moved.",
+    "backHome": "Back to home"
+  }
+}
