@@ -34,7 +34,7 @@ export function Navbar() {
 
   // Close the mobile menu when resizing up to the desktop breakpoint.
   React.useEffect(() => {
-    const mq = window.matchMedia("(min-width: 768px)");
+    const mq = window.matchMedia("(min-width: 1024px)");
     const onChange = () => {
       if (mq.matches) setOpen(false);
     };
@@ -56,12 +56,12 @@ export function Navbar() {
           href="#home"
           className="text-lg font-bold tracking-tight transition-colors hover:text-primary"
         >
-          {siteConfig.name}
+          {siteConfig.shortName}
           <span className="text-primary">.</span>
         </a>
 
         {/* Desktop navigation */}
-        <ul className="hidden items-center gap-1 md:flex">
+        <ul className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
@@ -80,7 +80,7 @@ export function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="lg:hidden"
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
@@ -98,7 +98,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden border-b border-border/60 bg-background/95 backdrop-blur-lg md:hidden"
+            className="overflow-hidden border-b border-border/60 bg-background/95 backdrop-blur-lg lg:hidden"
           >
             <ul className="flex flex-col gap-1 px-6 py-4">
               {navItems.map((item) => (

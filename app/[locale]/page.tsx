@@ -1,7 +1,18 @@
 import { setRequestLocale } from "next-intl/server";
 
 import { Navbar } from "@/components/navbar";
-import { About, Hero, Skills } from "@/sections";
+import { Footer } from "@/components/footer";
+import {
+  About,
+  Certifications,
+  Contact,
+  Education,
+  Experience,
+  Hero,
+  Projects,
+  Resume,
+  Skills,
+} from "@/sections";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -18,7 +29,14 @@ export default async function HomePage({ params }: PageProps) {
         <Hero />
         <About />
         <Skills />
+        <Education />
+        <Experience />
+        <Projects />
+        <Certifications />
+        <Resume />
+        <Contact />
       </main>
+      <Footer />
     </>
   );
 }

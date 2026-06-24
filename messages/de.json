@@ -8,8 +8,10 @@
     "home": "Start",
     "about": "Über mich",
     "skills": "Fähigkeiten",
-    "projects": "Projekte",
+    "education": "Ausbildung",
     "experience": "Erfahrung",
+    "projects": "Projekte",
+    "certifications": "Zertifikate",
     "contact": "Kontakt"
   },
   "hero": {
@@ -24,11 +26,11 @@
   "about": {
     "eyebrow": "Über mich",
     "title": "Über mich",
-    "lead": "Ich bin Manikanta Handral, ein Ingenieur, der komplexe Probleme gern in elegante, intelligente Produkte verwandelt.",
-    "body": "Meine Arbeit liegt an der Schnittstelle von künstlicher Intelligenz, Full-Stack-Entwicklung und Data Science. Ich entwerfe Systeme von Anfang bis Ende — von sauberen, barrierefreien Oberflächen über robuste APIs bis hin zu den Datenpipelines und Modellen, die sie antreiben. Performance, Wartbarkeit und Erlebnisse, die sich mühelos anfühlen, liegen mir besonders am Herzen.",
+    "lead": "Ich bin Manikanta Handral, Masterstudent der Informatik mit Schwerpunkt Big Data & Künstliche Intelligenz, ansässig in Leipzig, Deutschland.",
+    "body": "Ich bringe praktische Erfahrung in Softwareentwicklung, KI-Systemen, DevOps-Workflows, Full-Stack-Entwicklung, Cloud-Technologien und Anwendungen des maschinellen Lernens mit. Ich entwickle mit Leidenschaft intelligente, skalierbare und wirkungsvolle digitale Produkte — von sauberen, barrierefreien Oberflächen bis hin zu robusten APIs und den Daten und Modellen, die sie antreiben.",
     "education": {
       "title": "Ausbildung",
-      "description": "Hintergrund in Informatik mit starkem Fokus auf künstliche Intelligenz, maschinelles Lernen und moderne Softwareentwicklung."
+      "description": "M.Sc. Informatik (Big Data & Künstliche Intelligenz) an der SRH University Leipzig, aufbauend auf einem B.Sc. in Informatik."
     },
     "careerGoals": {
       "title": "Karriereziele",
@@ -48,13 +50,136 @@
       "tools": "Tools"
     }
   },
+  "education": {
+    "eyebrow": "Ausbildung",
+    "title": "Ausbildung",
+    "items": {
+      "msc": {
+        "degree": "M.Sc. Informatik (Big Data & Künstliche Intelligenz)",
+        "institution": "SRH University Leipzig",
+        "location": "Deutschland",
+        "period": "Heute",
+        "focus": [
+          "Künstliche Intelligenz",
+          "Big Data",
+          "Cloud Computing",
+          "Maschinelles Lernen",
+          "Skalierbare Systeme"
+        ]
+      },
+      "bsc": {
+        "degree": "B.Sc. Informatik",
+        "period": "2025",
+        "focus": [
+          "Software Engineering",
+          "Datenstrukturen",
+          "Algorithmen",
+          "Datenbanken",
+          "Webtechnologien"
+        ]
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Erfahrung",
+    "title": "Erfahrung",
+    "items": {
+      "moka": {
+        "role": "DevOps-Praktikant",
+        "company": "Moka Software Private Limited",
+        "period": "Nov 2025 – Feb 2026",
+        "highlights": [
+          "CI/CD-Workflows",
+          "Deployment-Unterstützung",
+          "API-Integration",
+          "Produktions-Monitoring",
+          "Agile Zusammenarbeit",
+          "Cloud-Technologien"
+        ]
+      },
+      "biosoft": {
+        "role": "Engineering-Praktikant",
+        "company": "Biosoft Health Tech Private Limited",
+        "period": "Okt 2024 – Dez 2024",
+        "highlights": [
+          "React.js-Entwicklung",
+          ".NET-Core-APIs",
+          "SQL Server",
+          "Frontend-Backend-Integration",
+          "Authentifizierungs-APIs",
+          "Testen und Debugging"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Projekte",
+    "title": "Ausgewählte Projekte",
+    "subtitle": "Projekte, die Fähigkeiten in KI, maschinellem Lernen, Full-Stack-Entwicklung und Engineering zeigen.",
+    "code": "Code",
+    "liveDemo": "Live-Demo",
+    "items": {
+      "vital-guard": {
+        "title": "Vital Guard – IoT-Sicherheitssystem",
+        "description": "IoT-basiertes tragbares Sturzerkennungssystem mit ESP8266, MPU6050, GPS und Blynk."
+      },
+      "video-anomaly-detection": {
+        "title": "Video-Anomalieerkennungssystem",
+        "description": "KI-gestützte Überwachungs-Anomalieerkennung mit Transfer Learning und Deep-Learning-Techniken."
+      },
+      "sms-spam-detection": {
+        "title": "SMS-Spam-Erkennungssystem",
+        "description": "NLP-basiertes maschinelles Lernsystem zur Klassifizierung von Spam- und legitimen Nachrichten."
+      }
+    }
+  },
+  "certifications": {
+    "eyebrow": "Zertifikate",
+    "title": "Zertifikate",
+    "items": {
+      "aws": {
+        "title": "AWS Cloud Practitioner Training"
+      },
+      "dataAnalytics": {
+        "title": "Data Analytics Internship Certification"
+      },
+      "aiTools": {
+        "title": "AI Tools Workshop Certification"
+      }
+    }
+  },
+  "resume": {
+    "eyebrow": "Lebenslauf",
+    "title": "Lebenslauf",
+    "description": "Möchten Sie einen vollständigen Überblick über meine Erfahrung, Ausbildung und Projekte? Laden Sie meinen Lebenslauf als PDF herunter.",
+    "download": "Lebenslauf herunterladen"
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Kontakt",
+    "subtitle": "Lassen Sie uns vernetzen und gemeinsam etwas Bedeutsames schaffen.",
+    "locationLabel": "Standort",
+    "emailLabel": "E-Mail",
+    "emailMe": "E-Mail senden",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "headline": "AI Engineer | Full-Stack-Entwickler | Data-Science-Enthusiast",
+    "rights": "Alle Rechte vorbehalten."
+  },
   "common": {
     "language": "Sprache",
     "theme": "Erscheinungsbild",
     "light": "Hell",
     "dark": "Dunkel",
     "system": "System",
-    "toggleTheme": "Erscheinungsbild umschalten"
+    "toggleTheme": "Erscheinungsbild umschalten",
+    "focusAreas": "Schwerpunkte",
+    "status": {
+      "current": "Aktuell",
+      "completed": "Abgeschlossen"
+    }
   },
   "notFound": {
     "title": "Seite nicht gefunden",

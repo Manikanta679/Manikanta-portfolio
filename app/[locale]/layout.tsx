@@ -65,7 +65,6 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      creator: siteConfig.author.twitter,
       images: [siteConfig.ogImage],
     },
     icons: { icon: "/favicon.ico" },

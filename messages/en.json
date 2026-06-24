@@ -8,8 +8,10 @@
     "home": "Home",
     "about": "About",
     "skills": "Skills",
-    "projects": "Projects",
+    "education": "Education",
     "experience": "Experience",
+    "projects": "Projects",
+    "certifications": "Certifications",
     "contact": "Contact"
   },
   "hero": {
@@ -24,11 +26,11 @@
   "about": {
     "eyebrow": "About",
     "title": "About Me",
-    "lead": "I'm Manikanta Handral, an engineer who loves turning complex problems into elegant, intelligent products.",
-    "body": "My work sits at the intersection of artificial intelligence, full-stack engineering and data science. I enjoy designing systems end to end — from clean, accessible interfaces to robust APIs and the data pipelines and models that power them. I care deeply about performance, maintainability and shipping experiences that feel effortless to use.",
+    "lead": "I'm Manikanta Handral, a Master's student in Computer Science specializing in Big Data & Artificial Intelligence, based in Leipzig, Germany.",
+    "body": "I bring hands-on experience across software engineering, AI systems, DevOps workflows, full-stack development, cloud technologies and machine learning applications. I'm passionate about building intelligent, scalable and impactful digital products — from clean, accessible interfaces to robust APIs and the data and models that power them.",
     "education": {
       "title": "Education",
-      "description": "Background in Computer Science with a strong focus on artificial intelligence, machine learning and modern software engineering practices."
+      "description": "M.Sc. Computer Science (Big Data & Artificial Intelligence) at SRH University Leipzig, building on a B.Sc. in Computer Science."
     },
     "careerGoals": {
       "title": "Career Goals",
@@ -48,13 +50,136 @@
       "tools": "Tools"
     }
   },
+  "education": {
+    "eyebrow": "Education",
+    "title": "Education",
+    "items": {
+      "msc": {
+        "degree": "M.Sc. Computer Science (Big Data & Artificial Intelligence)",
+        "institution": "SRH University Leipzig",
+        "location": "Germany",
+        "period": "Present",
+        "focus": [
+          "Artificial Intelligence",
+          "Big Data",
+          "Cloud Computing",
+          "Machine Learning",
+          "Scalable Systems"
+        ]
+      },
+      "bsc": {
+        "degree": "B.Sc. Computer Science",
+        "period": "2025",
+        "focus": [
+          "Software Engineering",
+          "Data Structures",
+          "Algorithms",
+          "Databases",
+          "Web Technologies"
+        ]
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Experience",
+    "items": {
+      "moka": {
+        "role": "DevOps Intern",
+        "company": "Moka Software Private Limited",
+        "period": "Nov 2025 – Feb 2026",
+        "highlights": [
+          "CI/CD workflows",
+          "Deployment support",
+          "API integration",
+          "Production monitoring",
+          "Agile collaboration",
+          "Cloud technologies"
+        ]
+      },
+      "biosoft": {
+        "role": "Engineering Intern",
+        "company": "Biosoft Health Tech Private Limited",
+        "period": "Oct 2024 – Dec 2024",
+        "highlights": [
+          "React.js development",
+          ".NET Core APIs",
+          "SQL Server",
+          "Frontend-backend integration",
+          "Authentication APIs",
+          "Testing and debugging"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "Featured Projects",
+    "subtitle": "Projects demonstrating AI, Machine Learning, Full Stack Development and Engineering capabilities.",
+    "code": "Code",
+    "liveDemo": "Live Demo",
+    "items": {
+      "vital-guard": {
+        "title": "Vital Guard – IoT Safety System",
+        "description": "IoT-based wearable fall detection system using ESP8266, MPU6050, GPS and Blynk."
+      },
+      "video-anomaly-detection": {
+        "title": "Video Anomaly Detection System",
+        "description": "AI-powered surveillance anomaly detection using transfer learning and deep learning techniques."
+      },
+      "sms-spam-detection": {
+        "title": "SMS Spam Detection System",
+        "description": "NLP-based machine learning system for classifying spam and legitimate messages."
+      }
+    }
+  },
+  "certifications": {
+    "eyebrow": "Certifications",
+    "title": "Certifications",
+    "items": {
+      "aws": {
+        "title": "AWS Cloud Practitioner Training"
+      },
+      "dataAnalytics": {
+        "title": "Data Analytics Internship Certification"
+      },
+      "aiTools": {
+        "title": "AI Tools Workshop Certification"
+      }
+    }
+  },
+  "resume": {
+    "eyebrow": "Resume",
+    "title": "Resume",
+    "description": "Want the full overview of my experience, education and projects? Download my resume as a PDF.",
+    "download": "Download Resume"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Contact Me",
+    "subtitle": "Let's connect and build something meaningful.",
+    "locationLabel": "Location",
+    "emailLabel": "Email",
+    "emailMe": "Email Me",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "headline": "AI Engineer | Full Stack Developer | Data Science Enthusiast",
+    "rights": "All rights reserved."
+  },
   "common": {
     "language": "Language",
     "theme": "Theme",
     "light": "Light",
     "dark": "Dark",
     "system": "System",
-    "toggleTheme": "Toggle theme"
+    "toggleTheme": "Toggle theme",
+    "focusAreas": "Focus Areas",
+    "status": {
+      "current": "Current",
+      "completed": "Completed"
+    }
   },
   "notFound": {
     "title": "Page not found",
