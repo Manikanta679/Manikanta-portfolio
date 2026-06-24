@@ -45,7 +45,7 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {year} {siteConfig.name}. {tf("rights")}
           </p>
-          <SocialLinks />
+          <SocialLinks includeEmail />
         </div>
       </div>
     </footer>

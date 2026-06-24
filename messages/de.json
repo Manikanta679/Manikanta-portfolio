@@ -116,20 +116,88 @@
     "eyebrow": "Projekte",
     "title": "Ausgewählte Projekte",
     "subtitle": "Projekte, die Fähigkeiten in KI, maschinellem Lernen, Full-Stack-Entwicklung und Engineering zeigen.",
-    "code": "Code",
-    "liveDemo": "Live-Demo",
+    "viewDetails": "Details ansehen",
+    "github": "GitHub",
+    "modal": {
+      "overview": "Überblick",
+      "problem": "Problem",
+      "solution": "Lösung",
+      "technologies": "Technologien",
+      "achievements": "Wichtigste Erfolge",
+      "architecture": "Architektur",
+      "challenges": "Herausforderungen",
+      "futureImprovements": "Zukünftige Verbesserungen",
+      "close": "Schließen"
+    },
     "items": {
       "vital-guard": {
         "title": "Vital Guard – IoT-Sicherheitssystem",
-        "description": "IoT-basiertes tragbares Sturzerkennungssystem mit ESP8266, MPU6050, GPS und Blynk."
+        "description": "IoT-basiertes tragbares Sturzerkennungssystem mit ESP8266, MPU6050, GPS und Blynk.",
+        "category": "IoT & Embedded",
+        "overview": "Ein tragbares Sicherheitsgerät, das Stürze automatisch erkennt und Pflegepersonen in Echtzeit mit dem aktuellen Standort des Trägers alarmiert.",
+        "problem": "Ältere und gefährdete Personen, die allein stürzen, können oft keine Hilfe rufen, wodurch aus einem beherrschbaren Vorfall ein medizinischer Notfall wird.",
+        "solution": "Ein ESP8266-basiertes Wearable liest kontinuierlich Bewegungsdaten eines MPU6050-Sensors, erkennt Sturzmuster, erfasst GPS-Koordinaten und sendet über die Blynk-Plattform sofortige Alarme an Pflegepersonen.",
+        "achievements": [
+          "Echtzeit-Sturzerkennung über Bewegungsmuster-Schwellenwerte",
+          "Sofortige Alarme an Pflegepersonen mit Live-GPS-Standort",
+          "Energiesparendes Wearable-Design für den ganztägigen Einsatz"
+        ],
+        "architecture": "Eine Sensorschicht (MPU6050 + GPS) versorgt den ESP8266-Mikrocontroller, der die Erkennungslogik ausführt und über WLAN mit der Blynk-Cloud für Benachrichtigungen und Dashboards kommuniziert.",
+        "challenges": [
+          "Anpassung der Schwellenwerte zur Minimierung von Fehlalarmen",
+          "Aufrechterhaltung einer zuverlässigen Verbindung bei geringem Stromverbrauch"
+        ],
+        "futureImprovements": [
+          "On-Device-ML-Modell für intelligentere Sturzklassifizierung",
+          "Herzfrequenz- und SpO2-Überwachung",
+          "Begleitende mobile Anwendung"
+        ]
       },
       "video-anomaly-detection": {
         "title": "Video-Anomalieerkennungssystem",
-        "description": "KI-gestützte Überwachungs-Anomalieerkennung mit Transfer Learning und Deep-Learning-Techniken."
+        "description": "KI-gestützte Überwachungs-Anomalieerkennung mit Transfer Learning und Deep-Learning-Techniken.",
+        "category": "Computer Vision",
+        "overview": "Ein KI-Überwachungssystem, das ungewöhnliche oder verdächtige Aktivitäten in Videostreams automatisch markiert.",
+        "problem": "Die manuelle Überwachung von Aufnahmen ist mühsam und fehleranfällig, sodass kritische Anomalien häufig übersehen werden.",
+        "solution": "Mithilfe von Transfer Learning auf neuronalen Faltungsnetzen lernt das System normale Muster aus Videobildern (verarbeitet mit OpenCV) und markiert Abweichungen als Anomalien.",
+        "achievements": [
+          "Transfer Learning zur Reduzierung des Trainingsdatenbedarfs",
+          "Anomalie-Bewertung auf Frame-Ebene bei Live-Video",
+          "Deutlich geringerer manueller Überwachungsaufwand"
+        ],
+        "architecture": "OpenCV übernimmt die Bildextraktion und Vorverarbeitung; ein mit TensorFlow erstelltes CNN führt Merkmalsextraktion und Anomalie-Bewertung durch, deren Ergebnisse zur Überprüfung bereitgestellt werden.",
+        "challenges": [
+          "Umgang mit unterschiedlichen Licht- und Kamerabedingungen",
+          "Abwägung zwischen Erkennungsempfindlichkeit und Fehlalarmen"
+        ],
+        "futureImprovements": [
+          "Temporale Modelle (LSTM / 3D-CNN) für Bewegungskontext",
+          "Echtzeit-Bereitstellung auf Edge-Geräten",
+          "Alarmierungs- und Analyse-Dashboard"
+        ]
       },
       "sms-spam-detection": {
         "title": "SMS-Spam-Erkennungssystem",
-        "description": "NLP-basiertes maschinelles Lernsystem zur Klassifizierung von Spam- und legitimen Nachrichten."
+        "description": "NLP-basiertes maschinelles Lernsystem zur Klassifizierung von Spam- und legitimen Nachrichten.",
+        "category": "NLP & Maschinelles Lernen",
+        "overview": "Ein maschinelles Lernsystem, das Textnachrichten als Spam oder legitim (Ham) klassifiziert.",
+        "problem": "Spam-Nachrichten überladen Postfächer und setzen Nutzer Phishing und Betrug aus.",
+        "solution": "Nachrichten werden mit NLTK bereinigt und tokenisiert, in numerische Merkmale umgewandelt und mit scikit-learn-Modellen klassifiziert, die auf gelabelten SMS-Daten trainiert wurden.",
+        "achievements": [
+          "Hochpräzise Spam-/Ham-Klassifizierung",
+          "Durchgängige NLP-Vorverarbeitungs-Pipeline",
+          "Leichtgewichtige, schnelle Inferenz"
+        ],
+        "architecture": "Textvorverarbeitung (NLTK) → Merkmalsextraktion (TF-IDF) → scikit-learn-Klassifikator → Vorhersage, eingebettet in eine wiederverwendbare Pipeline.",
+        "challenges": [
+          "Umgang mit unausgewogenen Spam-/Ham-Klassen",
+          "Vermeidung von Overfitting bei kurzen, verrauschten Texten"
+        ],
+        "futureImprovements": [
+          "Transformer-basierte Modelle für höhere Genauigkeit",
+          "Mehrsprachige Unterstützung",
+          "Bereitstellung als gehostete API"
+        ]
       }
     }
   },
@@ -157,6 +225,7 @@
   "contact": {
     "eyebrow": "Kontakt",
     "title": "Kontakt",
+    "cta": "Lassen Sie uns gemeinsam etwas Großartiges schaffen",
     "subtitle": "Lassen Sie uns vernetzen und gemeinsam etwas Bedeutsames schaffen.",
     "locationLabel": "Standort",
     "emailLabel": "E-Mail",
@@ -178,7 +247,8 @@
     "focusAreas": "Schwerpunkte",
     "status": {
       "current": "Aktuell",
-      "completed": "Abgeschlossen"
+      "completed": "Abgeschlossen",
+      "inProgress": "In Bearbeitung"
     }
   },
   "notFound": {

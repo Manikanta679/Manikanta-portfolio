@@ -4,36 +4,35 @@ import * as React from "react";
 import { motion, type HTMLMotionProps } from "framer-motion";
 
 import { cn } from "@/lib/utils";
+import { variantMap, type AnimationVariant } from "./variants";
 
-type RevealProps = HTMLMotionProps<"div"> & {
+type RevealProps = Omit<HTMLMotionProps<"div">, "variants"> & {
+  /** Which entrance animation to use. Defaults to "fadeUp". */
+  variant?: AnimationVariant;
   /** Delay before the animation starts (seconds). */
   delay?: number;
-  /** Animation duration (seconds). */
-  duration?: number;
-  /** Vertical offset to animate from (px). */
-  y?: number;
   className?: string;
   children: React.ReactNode;
 };
 
 /**
- * Reusable scroll-reveal wrapper. Fades + slides its children into view once,
- * respecting the user's reduced-motion preference (handled by Framer Motion).
+ * Reusable scroll-reveal wrapper built on the shared animation variants.
+ * Animates once when scrolled into view; honours the chosen `variant`.
  */
 export function Reveal({
   children,
+  variant = "fadeUp",
   delay = 0,
-  duration = 0.5,
-  y = 24,
   className,
   ...props
 }: RevealProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
+      variants={variantMap[variant]}
+      custom={delay}
+      initial="hidden"
+      whileInView="show"
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
       className={cn(className)}
       {...props}
     >

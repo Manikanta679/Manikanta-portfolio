@@ -116,20 +116,88 @@
     "eyebrow": "Projects",
     "title": "Featured Projects",
     "subtitle": "Projects demonstrating AI, Machine Learning, Full Stack Development and Engineering capabilities.",
-    "code": "Code",
-    "liveDemo": "Live Demo",
+    "viewDetails": "View Details",
+    "github": "GitHub",
+    "modal": {
+      "overview": "Overview",
+      "problem": "Problem",
+      "solution": "Solution",
+      "technologies": "Technologies",
+      "achievements": "Key Achievements",
+      "architecture": "Architecture",
+      "challenges": "Challenges",
+      "futureImprovements": "Future Improvements",
+      "close": "Close"
+    },
     "items": {
       "vital-guard": {
         "title": "Vital Guard – IoT Safety System",
-        "description": "IoT-based wearable fall detection system using ESP8266, MPU6050, GPS and Blynk."
+        "description": "IoT-based wearable fall detection system using ESP8266, MPU6050, GPS and Blynk.",
+        "category": "IoT & Embedded",
+        "overview": "A wearable safety device that automatically detects falls and alerts caregivers in real time with the wearer's live location.",
+        "problem": "Elderly and at-risk individuals who fall while alone often cannot call for help, turning a manageable incident into a medical emergency.",
+        "solution": "An ESP8266-based wearable continuously reads motion data from an MPU6050 sensor, detects fall patterns, captures GPS coordinates and pushes instant alerts to caregivers through the Blynk platform.",
+        "achievements": [
+          "Real-time fall detection using motion-pattern thresholds",
+          "Instant caregiver alerts with live GPS location",
+          "Low-power wearable design suitable for all-day use"
+        ],
+        "architecture": "A sensor layer (MPU6050 + GPS) feeds the ESP8266 microcontroller, which runs the detection logic and communicates over Wi-Fi with the Blynk cloud for notifications and dashboards.",
+        "challenges": [
+          "Tuning thresholds to minimise false positives",
+          "Maintaining reliable connectivity on a low-power device"
+        ],
+        "futureImprovements": [
+          "On-device ML model for smarter fall classification",
+          "Heart-rate and SpO2 monitoring",
+          "Companion mobile application"
+        ]
       },
       "video-anomaly-detection": {
         "title": "Video Anomaly Detection System",
-        "description": "AI-powered surveillance anomaly detection using transfer learning and deep learning techniques."
+        "description": "AI-powered surveillance anomaly detection using transfer learning and deep learning techniques.",
+        "category": "Computer Vision",
+        "overview": "An AI surveillance system that automatically flags unusual or suspicious activity in video streams.",
+        "problem": "Manual monitoring of surveillance footage is tedious and error-prone, so critical anomalies are frequently missed.",
+        "solution": "Using transfer learning on convolutional neural networks, the system learns normal patterns from video frames (processed with OpenCV) and flags deviations as anomalies.",
+        "achievements": [
+          "Transfer learning to reduce training-data requirements",
+          "Frame-level anomaly scoring on live video",
+          "Significantly reduced manual monitoring effort"
+        ],
+        "architecture": "OpenCV handles frame extraction and preprocessing; a CNN built with TensorFlow performs feature extraction and anomaly scoring, with results surfaced for review.",
+        "challenges": [
+          "Handling varied lighting and camera conditions",
+          "Balancing detection sensitivity against false alarms"
+        ],
+        "futureImprovements": [
+          "Temporal models (LSTM / 3D-CNN) for motion context",
+          "Real-time deployment on edge devices",
+          "Alerting and analytics dashboard"
+        ]
       },
       "sms-spam-detection": {
         "title": "SMS Spam Detection System",
-        "description": "NLP-based machine learning system for classifying spam and legitimate messages."
+        "description": "NLP-based machine learning system for classifying spam and legitimate messages.",
+        "category": "NLP & Machine Learning",
+        "overview": "A machine-learning system that classifies text messages as spam or legitimate (ham).",
+        "problem": "Spam messages clutter inboxes and expose users to phishing and fraud.",
+        "solution": "Messages are cleaned and tokenised with NLTK, transformed into numerical features, and classified using scikit-learn models trained on labelled SMS data.",
+        "achievements": [
+          "High-accuracy spam/ham classification",
+          "End-to-end NLP preprocessing pipeline",
+          "Lightweight, fast inference"
+        ],
+        "architecture": "Text preprocessing (NLTK) → feature extraction (TF-IDF) → scikit-learn classifier → prediction, wrapped in a reusable pipeline.",
+        "challenges": [
+          "Handling imbalanced spam/ham classes",
+          "Avoiding overfitting on short, noisy text"
+        ],
+        "futureImprovements": [
+          "Transformer-based models for higher accuracy",
+          "Multi-language support",
+          "Deployment as a hosted API"
+        ]
       }
     }
   },
@@ -157,6 +225,7 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Contact Me",
+    "cta": "Let's Build Something Amazing Together",
     "subtitle": "Let's connect and build something meaningful.",
     "locationLabel": "Location",
     "emailLabel": "Email",
@@ -178,7 +247,8 @@
     "focusAreas": "Focus Areas",
     "status": {
       "current": "Current",
-      "completed": "Completed"
+      "completed": "Completed",
+      "inProgress": "In Progress"
     }
   },
   "notFound": {

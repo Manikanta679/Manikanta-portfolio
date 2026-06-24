@@ -1,10 +1,11 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { ArrowDown, FolderGit2, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
+import { EASE } from "@/components/motion/variants";
 
 const container: Variants = {
   hidden: {},
@@ -18,23 +19,61 @@ const item: Variants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] },
+    transition: { duration: 0.6, ease: EASE },
   },
 };
 
 export function Hero() {
   const t = useTranslations("hero");
+  const reduceMotion = useReducedMotion();
+
+  /** Infinite float animation, disabled when the user prefers reduced motion. */
+  const float = (range: number, duration: number) =>
+    reduceMotion
+      ? undefined
+      : {
+          y: [0, -range, 0],
+          x: [0, range / 2, 0],
+          transition: {
+            duration,
+            repeat: Infinity,
+            ease: "easeInOut" as const,
+          },
+        };
 
   return (
     <section
       id="home"
       className="relative flex min-h-svh items-center justify-center overflow-hidden px-6 pt-16"
     >
-      {/* Decorative background */}
-      <div
+      {/* Animated background glow */}
+      <motion.div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[420px] w-[680px] max-w-full -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]"
+        animate={
+          reduceMotion ? undefined : { opacity: [0.55, 1, 0.55], scale: [1, 1.08, 1] }
+        }
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
       />
+
+      {/* Floating gradient orbs */}
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute left-[12%] top-[28%] -z-10 size-40 rounded-full bg-blue-500/20 blur-3xl"
+        animate={float(30, 9)}
+      />
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute right-[12%] top-[24%] -z-10 size-52 rounded-full bg-fuchsia-500/15 blur-3xl"
+        animate={float(40, 11)}
+      />
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute bottom-[18%] left-[40%] -z-10 size-44 rounded-full bg-emerald-500/15 blur-3xl"
+        animate={float(24, 10)}
+      />
+
+      {/* Grid overlay */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 opacity-60"
@@ -106,7 +145,7 @@ export function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll cue */}
+      {/* Animated scroll indicator */}
       <motion.a
         href="#about"
         aria-label={t("scrollDown")}
@@ -115,7 +154,14 @@ export function Hero() {
         transition={{ delay: 1, duration: 0.6 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground transition-colors hover:text-foreground"
       >
-        <ArrowDown className="size-5 animate-bounce" />
+        <span className="flex h-9 w-5 items-start justify-center rounded-full border-2 border-current p-1">
+          <motion.span
+            className="size-1 rounded-full bg-current"
+            animate={reduceMotion ? undefined : { y: [0, 12, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </span>
+        <ArrowDown className="mx-auto mt-1 size-4" />
       </motion.a>
     </section>
   );

@@ -17,7 +17,7 @@ export function Contact() {
       icon: MapPin,
       label: t("locationLabel"),
       value: siteConfig.location,
-      href: undefined,
+      href: undefined as string | undefined,
     },
     {
       icon: Mail,
@@ -31,18 +31,18 @@ export function Contact() {
     <Section id="contact">
       <SectionHeading
         eyebrow={t("eyebrow")}
-        title={t("title")}
+        title={t("cta")}
         description={t("subtitle")}
         align="center"
       />
 
-      <Reveal className="mx-auto mt-12 max-w-2xl">
+      <Reveal className="mx-auto mt-12 max-w-2xl" variant="scaleIn">
         <GlassCard>
           <CardContent className="space-y-8 p-8 sm:p-10">
             <div className="grid gap-4 sm:grid-cols-2">
               {details.map(({ icon: Icon, label, value, href }) => {
                 const body = (
-                  <div className="flex items-center gap-3 rounded-lg border border-border/50 bg-background/40 p-4 transition-colors hover:border-primary/40">
+                  <div className="flex h-full items-center gap-3 rounded-xl border border-border/50 bg-background/40 p-4 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md">
                     <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <Icon className="size-5" />
                     </span>

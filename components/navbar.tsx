@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { navItems } from "@/constants/navigation";
 import { siteConfig } from "@/constants/site";
+import { useActiveSection } from "@/hooks/use-active-section";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageSwitcher } from "@/components/language-switcher";
@@ -16,6 +17,13 @@ export function Navbar() {
   const t = useTranslations("nav");
   const [scrolled, setScrolled] = React.useState(false);
   const [open, setOpen] = React.useState(false);
+
+  const sectionIds = React.useMemo(
+    () => navItems.map((item) => item.href.replace("#", "")),
+    []
+  );
+  const activeId = useActiveSection(sectionIds);
+  const activeItem = navItems.find((item) => item.href === `#${activeId}`);
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -60,21 +68,43 @@ export function Navbar() {
           <span className="text-primary">.</span>
         </a>
 
-        {/* Desktop navigation */}
+        {/* Desktop navigation with animated active underline */}
         <ul className="hidden items-center gap-1 lg:flex">
-          {navItems.map((item) => (
-            <li key={item.href}>
-              <a
-                href={item.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
-              >
-                {t(item.labelKey)}
-              </a>
-            </li>
-          ))}
+          {navItems.map((item) => {
+            const isActive = item.href === `#${activeId}`;
+            return (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  aria-current={isActive ? "true" : undefined}
+                  className={cn(
+                    "relative rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                    isActive
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  {t(item.labelKey)}
+                  {isActive ? (
+                    <motion.span
+                      layoutId="nav-underline"
+                      className="absolute inset-x-2 -bottom-0.5 h-0.5 rounded-full bg-primary"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  ) : null}
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="flex items-center gap-1">
+          {/* Current section indicator (mobile) */}
+          {activeItem ? (
+            <span className="mr-1 rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground lg:hidden">
+              {t(activeItem.labelKey)}
+            </span>
+          ) : null}
           <LanguageSwitcher />
           <ThemeToggle />
           <Button
@@ -101,17 +131,32 @@ export function Navbar() {
             className="overflow-hidden border-b border-border/60 bg-background/95 backdrop-blur-lg lg:hidden"
           >
             <ul className="flex flex-col gap-1 px-6 py-4">
-              {navItems.map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="block rounded-md px-3 py-2.5 text-base font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
-                  >
-                    {t(item.labelKey)}
-                  </a>
-                </li>
-              ))}
+              {navItems.map((item) => {
+                const isActive = item.href === `#${activeId}`;
+                return (
+                  <li key={item.href}>
+                    <a
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      aria-current={isActive ? "true" : undefined}
+                      className={cn(
+                        "flex items-center gap-2 rounded-md px-3 py-2.5 text-base font-medium transition-colors",
+                        isActive
+                          ? "bg-accent text-foreground"
+                          : "text-muted-foreground hover:bg-accent hover:text-foreground"
+                      )}
+                    >
+                      <span
+                        className={cn(
+                          "size-1.5 rounded-full transition-colors",
+                          isActive ? "bg-primary" : "bg-transparent"
+                        )}
+                      />
+                      {t(item.labelKey)}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </motion.div>
         ) : null}
