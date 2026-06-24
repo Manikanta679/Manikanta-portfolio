@@ -1,19 +1,52 @@
 {
   "metadata": {
-    "title": "Manikanta — Portfolio",
-    "description": "Personal portfolio of Manikanta — software engineer building modern, performant web experiences.",
-    "keywords": "portfolio, software engineer, web developer, Next.js, TypeScript, React"
+    "title": "Manikanta Handral — Portfolio",
+    "description": "Manikanta Handral — AI Engineer, Full Stack Developer and Data Science enthusiast building intelligent systems, scalable web applications and data-driven solutions.",
+    "keywords": "Manikanta Handral, AI Engineer, Full Stack Developer, Data Science, Machine Learning, Next.js, TypeScript, React"
   },
   "nav": {
     "home": "Home",
     "about": "About",
+    "skills": "Skills",
     "projects": "Projects",
     "experience": "Experience",
     "contact": "Contact"
   },
-  "home": {
-    "greeting": "Hi, I'm Manikanta",
-    "tagline": "I build modern, performant web experiences."
+  "hero": {
+    "available": "Available for opportunities",
+    "name": "Manikanta Handral",
+    "headline": "AI Engineer | Full Stack Developer | Data Science Enthusiast",
+    "intro": "Building intelligent systems, scalable web applications, and data-driven solutions.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "scrollDown": "Scroll to About section"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "About Me",
+    "lead": "I'm Manikanta Handral, an engineer who loves turning complex problems into elegant, intelligent products.",
+    "body": "My work sits at the intersection of artificial intelligence, full-stack engineering and data science. I enjoy designing systems end to end — from clean, accessible interfaces to robust APIs and the data pipelines and models that power them. I care deeply about performance, maintainability and shipping experiences that feel effortless to use.",
+    "education": {
+      "title": "Education",
+      "description": "Background in Computer Science with a strong focus on artificial intelligence, machine learning and modern software engineering practices."
+    },
+    "careerGoals": {
+      "title": "Career Goals",
+      "description": "To build AI-powered products that create real-world impact, while growing as an engineer who bridges research, data and scalable application development."
+    }
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Skills & Technologies",
+    "subtitle": "A snapshot of the languages, frameworks and tools I work with across AI, the web and data.",
+    "categories": {
+      "programming": "Programming",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "aiData": "AI & Data",
+      "databases": "Databases",
+      "tools": "Tools"
+    }
   },
   "common": {
     "language": "Language",

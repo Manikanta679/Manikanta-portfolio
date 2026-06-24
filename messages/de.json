@@ -1,19 +1,52 @@
 {
   "metadata": {
-    "title": "Manikanta — Portfolio",
-    "description": "Persönliches Portfolio von Manikanta — Softwareentwickler für moderne, performante Web-Erlebnisse.",
-    "keywords": "Portfolio, Softwareentwickler, Webentwickler, Next.js, TypeScript, React"
+    "title": "Manikanta Handral — Portfolio",
+    "description": "Manikanta Handral — AI Engineer, Full-Stack-Entwickler und Data-Science-Enthusiast, der intelligente Systeme, skalierbare Webanwendungen und datengetriebene Lösungen entwickelt.",
+    "keywords": "Manikanta Handral, AI Engineer, Full Stack Entwickler, Data Science, Machine Learning, Next.js, TypeScript, React"
   },
   "nav": {
-    "home": "Startseite",
+    "home": "Start",
     "about": "Über mich",
+    "skills": "Fähigkeiten",
     "projects": "Projekte",
     "experience": "Erfahrung",
     "contact": "Kontakt"
   },
-  "home": {
-    "greeting": "Hallo, ich bin Manikanta",
-    "tagline": "Ich entwickle moderne, performante Web-Erlebnisse."
+  "hero": {
+    "available": "Offen für neue Möglichkeiten",
+    "name": "Manikanta Handral",
+    "headline": "AI Engineer | Full-Stack-Entwickler | Data-Science-Enthusiast",
+    "intro": "Ich entwickle intelligente Systeme, skalierbare Webanwendungen und datengetriebene Lösungen.",
+    "viewProjects": "Projekte ansehen",
+    "contactMe": "Kontakt aufnehmen",
+    "scrollDown": "Zum Abschnitt Über mich scrollen"
+  },
+  "about": {
+    "eyebrow": "Über mich",
+    "title": "Über mich",
+    "lead": "Ich bin Manikanta Handral, ein Ingenieur, der komplexe Probleme gern in elegante, intelligente Produkte verwandelt.",
+    "body": "Meine Arbeit liegt an der Schnittstelle von künstlicher Intelligenz, Full-Stack-Entwicklung und Data Science. Ich entwerfe Systeme von Anfang bis Ende — von sauberen, barrierefreien Oberflächen über robuste APIs bis hin zu den Datenpipelines und Modellen, die sie antreiben. Performance, Wartbarkeit und Erlebnisse, die sich mühelos anfühlen, liegen mir besonders am Herzen.",
+    "education": {
+      "title": "Ausbildung",
+      "description": "Hintergrund in Informatik mit starkem Fokus auf künstliche Intelligenz, maschinelles Lernen und moderne Softwareentwicklung."
+    },
+    "careerGoals": {
+      "title": "Karriereziele",
+      "description": "KI-gestützte Produkte zu entwickeln, die in der realen Welt einen Unterschied machen, und als Ingenieur zu wachsen, der Forschung, Daten und skalierbare Anwendungsentwicklung verbindet."
+    }
+  },
+  "skills": {
+    "eyebrow": "Fähigkeiten",
+    "title": "Fähigkeiten & Technologien",
+    "subtitle": "Ein Überblick über die Sprachen, Frameworks und Tools, mit denen ich in KI, Web und Daten arbeite.",
+    "categories": {
+      "programming": "Programmierung",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "aiData": "KI & Daten",
+      "databases": "Datenbanken",
+      "tools": "Tools"
+    }
   },
   "common": {
     "language": "Sprache",
