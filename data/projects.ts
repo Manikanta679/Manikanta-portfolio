@@ -47,6 +47,8 @@ export type ProjectContent = {
   title: string;
   description: string;
   category: string;
+  /** One-line, recruiter-facing outcome ("what it delivered"). */
+  impact: string;
   overview: string;
   problem: string;
   solution: string;

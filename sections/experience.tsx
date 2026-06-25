@@ -1,4 +1,4 @@
-import { Briefcase, Check } from "lucide-react";
+import { Briefcase, Building2, Calendar, Check } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Section } from "@/components/section";
@@ -34,11 +34,13 @@ export function Experience() {
                       <CardTitle className="text-lg leading-snug">
                         {content.role}
                       </CardTitle>
-                      <span className="rounded-md bg-muted px-2.5 py-0.5 text-xs font-medium text-muted-foreground">
+                      <span className="inline-flex items-center gap-1.5 rounded-md bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground">
+                        <Calendar className="size-3.5" aria-hidden />
                         {content.period}
                       </span>
                     </div>
-                    <p className="text-sm font-medium text-primary">
+                    <p className="flex items-center gap-1.5 text-sm font-semibold text-primary">
+                      <Building2 className="size-4 shrink-0" aria-hidden />
                       {content.company}
                     </p>
                   </CardHeader>

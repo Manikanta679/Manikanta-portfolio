@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Manikanta Handral — Portfolio",
-    "description": "Manikanta Handral — AI Engineer, Full Stack Developer and Data Science enthusiast building intelligent systems, scalable web applications and data-driven solutions.",
-    "keywords": "Manikanta Handral, AI Engineer, Full Stack Developer, Data Science, Machine Learning, Next.js, TypeScript, React"
+    "title": "Manikanta Engalligi — Portfolio",
+    "description": "Manikanta Engalligi — AI Engineer, Full Stack Developer and Data Science enthusiast building intelligent systems, scalable web applications and data-driven solutions.",
+    "keywords": "Manikanta Engalligi, AI Engineer, Full Stack Developer, Data Science, Machine Learning, Next.js, TypeScript, React"
   },
   "nav": {
     "home": "Home",
@@ -16,7 +16,7 @@
   },
   "hero": {
     "available": "Available for opportunities",
-    "name": "Manikanta Handral",
+    "name": "Manikanta Engalligi",
     "headline": "AI Engineer | Full Stack Developer | Data Science Enthusiast",
     "intro": "Building intelligent systems, scalable web applications, and data-driven solutions.",
     "viewProjects": "View Projects",
@@ -26,7 +26,7 @@
   "about": {
     "eyebrow": "About",
     "title": "About Me",
-    "lead": "I'm Manikanta Handral, a Master's student in Computer Science specializing in Big Data & Artificial Intelligence, based in Leipzig, Germany.",
+    "lead": "I'm Manikanta Engalligi, a Master's student in Computer Science specializing in Big Data & Artificial Intelligence, based in Leipzig, Germany.",
     "body": "I bring hands-on experience across software engineering, AI systems, DevOps workflows, full-stack development, cloud technologies and machine learning applications. I'm passionate about building intelligent, scalable and impactful digital products — from clean, accessible interfaces to robust APIs and the data and models that power them.",
     "education": {
       "title": "Education",
@@ -118,6 +118,10 @@
     "subtitle": "Projects demonstrating AI, Machine Learning, Full Stack Development and Engineering capabilities.",
     "viewDetails": "View Details",
     "github": "GitHub",
+    "empty": {
+      "title": "Projects coming soon",
+      "description": "New work is in progress and will be showcased here shortly."
+    },
     "modal": {
       "overview": "Overview",
       "problem": "Problem",
@@ -134,6 +138,7 @@
         "title": "Vital Guard – IoT Safety System",
         "description": "IoT-based wearable fall detection system using ESP8266, MPU6050, GPS and Blynk.",
         "category": "IoT & Embedded",
+        "impact": "Enables instant, location-aware fall alerts so help can reach at-risk users faster.",
         "overview": "A wearable safety device that automatically detects falls and alerts caregivers in real time with the wearer's live location.",
         "problem": "Elderly and at-risk individuals who fall while alone often cannot call for help, turning a manageable incident into a medical emergency.",
         "solution": "An ESP8266-based wearable continuously reads motion data from an MPU6050 sensor, detects fall patterns, captures GPS coordinates and pushes instant alerts to caregivers through the Blynk platform.",
@@ -157,6 +162,7 @@
         "title": "Video Anomaly Detection System",
         "description": "AI-powered surveillance anomaly detection using transfer learning and deep learning techniques.",
         "category": "Computer Vision",
+        "impact": "Reduces manual surveillance monitoring through automated, frame-level anomaly detection.",
         "overview": "An AI surveillance system that automatically flags unusual or suspicious activity in video streams.",
         "problem": "Manual monitoring of surveillance footage is tedious and error-prone, so critical anomalies are frequently missed.",
         "solution": "Using transfer learning on convolutional neural networks, the system learns normal patterns from video frames (processed with OpenCV) and flags deviations as anomalies.",
@@ -180,6 +186,7 @@
         "title": "SMS Spam Detection System",
         "description": "NLP-based machine learning system for classifying spam and legitimate messages.",
         "category": "NLP & Machine Learning",
+        "impact": "Delivers high-accuracy spam filtering with a lightweight, fast NLP pipeline.",
         "overview": "A machine-learning system that classifies text messages as spam or legitimate (ham).",
         "problem": "Spam messages clutter inboxes and expose users to phishing and fraud.",
         "solution": "Messages are cleaned and tokenised with NLTK, transformed into numerical features, and classified using scikit-learn models trained on labelled SMS data.",
@@ -204,6 +211,10 @@
   "certifications": {
     "eyebrow": "Certifications",
     "title": "Certifications",
+    "empty": {
+      "title": "Certifications coming soon",
+      "description": "Newly earned certifications will appear here as they're completed."
+    },
     "items": {
       "aws": {
         "title": "AWS Cloud Practitioner Training"
@@ -244,6 +255,8 @@
     "dark": "Dark",
     "system": "System",
     "toggleTheme": "Toggle theme",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
     "focusAreas": "Focus Areas",
     "status": {
       "current": "Current",

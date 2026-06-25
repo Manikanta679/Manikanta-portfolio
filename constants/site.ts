@@ -3,7 +3,7 @@
  * Anything that varies per deployment should come from env vars instead.
  */
 export const siteConfig = {
-  name: "Manikanta Handral",
+  name: "Manikanta Engalligi",
   /** Short brand used in compact spots such as the navbar logo. */
   shortName: "Manikanta",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
@@ -13,7 +13,7 @@ export const siteConfig = {
   email: "manikantahandral@gmail.com",
   location: "Leipzig, Germany",
   author: {
-    name: "Manikanta Handral",
+    name: "Manikanta Engalligi",
   },
   links: {
     github: "https://github.com/Manikanta679",

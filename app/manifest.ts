@@ -3,13 +3,14 @@ import { siteConfig } from "@/constants/site";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: siteConfig.name,
-    short_name: siteConfig.name,
-    description: "Personal portfolio of Manikanta.",
+    name: `${siteConfig.name} — Portfolio`,
+    short_name: siteConfig.shortName,
+    description:
+      "Portfolio of Manikanta Engalligi — AI Engineer, Full Stack Developer and Data Science enthusiast building intelligent systems and scalable web applications.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
-    theme_color: "#000000",
+    theme_color: "#0a0a0a",
     icons: [
       {
         src: "/favicon.ico",

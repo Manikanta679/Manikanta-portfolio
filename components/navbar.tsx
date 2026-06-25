@@ -15,6 +15,7 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 
 export function Navbar() {
   const t = useTranslations("nav");
+  const tc = useTranslations("common");
   const [scrolled, setScrolled] = React.useState(false);
   const [open, setOpen] = React.useState(false);
 
@@ -59,7 +60,10 @@ export function Navbar() {
           : "border-b border-transparent bg-transparent"
       )}
     >
-      <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6">
+      <nav
+        aria-label={t("home")}
+        className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6"
+      >
         <a
           href="#home"
           className="text-lg font-bold tracking-tight transition-colors hover:text-primary"
@@ -111,8 +115,9 @@ export function Navbar() {
             variant="ghost"
             size="icon"
             className="lg:hidden"
-            aria-label="Toggle menu"
+            aria-label={open ? tc("closeMenu") : tc("openMenu")}
             aria-expanded={open}
+            aria-controls="mobile-nav"
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -124,6 +129,7 @@ export function Navbar() {
       <AnimatePresence>
         {open ? (
           <motion.div
+            id="mobile-nav"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}

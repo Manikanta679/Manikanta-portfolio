@@ -3,7 +3,7 @@
 import * as React from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Check, Github, X } from "lucide-react";
+import { Check, Github, TrendingUp, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Badge } from "@/components/ui/badge";
@@ -42,6 +42,7 @@ export function ProjectModal({
   const tc = useTranslations("common");
   const [mounted, setMounted] = React.useState(false);
   const closeRef = React.useRef<HTMLButtonElement>(null);
+  const panelRef = React.useRef<HTMLDivElement>(null);
   const titleId = React.useId();
 
   React.useEffect(() => setMounted(true), []);
@@ -50,9 +51,36 @@ export function ProjectModal({
     if (!open) return;
 
     document.body.style.overflow = "hidden";
+
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
+
+      // Trap focus inside the dialog so keyboard users can't tab out.
+      if (e.key === "Tab" && panelRef.current) {
+        const focusable = panelRef.current.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusable.length === 0) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (!first || !last) return;
+
+        const active = document.activeElement;
+
+        if (e.shiftKey && active === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && active === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     };
+
     window.addEventListener("keydown", onKeyDown);
     // Move focus into the dialog.
     const id = window.setTimeout(() => closeRef.current?.focus(), 0);
@@ -97,6 +125,7 @@ export function ProjectModal({
 
           {/* Panel */}
           <motion.div
+            ref={panelRef}
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
@@ -137,6 +166,16 @@ export function ProjectModal({
 
             {/* Body */}
             <div className="flex-1 space-y-6 overflow-y-auto p-6">
+              {content.impact ? (
+                <p className="flex items-start gap-2 rounded-lg border border-primary/20 bg-primary/5 p-3 text-sm font-medium text-foreground">
+                  <TrendingUp
+                    className="mt-0.5 size-4 shrink-0 text-primary"
+                    aria-hidden
+                  />
+                  <span>{content.impact}</span>
+                </p>
+              ) : null}
+
               {paragraphs.map(({ heading, body }) => (
                 <section key={heading} className="space-y-1.5">
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">

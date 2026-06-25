@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Manikanta Handral — Portfolio",
-    "description": "Manikanta Handral — AI Engineer, Full-Stack-Entwickler und Data-Science-Enthusiast, der intelligente Systeme, skalierbare Webanwendungen und datengetriebene Lösungen entwickelt.",
-    "keywords": "Manikanta Handral, AI Engineer, Full Stack Entwickler, Data Science, Machine Learning, Next.js, TypeScript, React"
+    "title": "Manikanta Engalligi — Portfolio",
+    "description": "Manikanta Engalligi — AI Engineer, Full-Stack-Entwickler und Data-Science-Enthusiast, der intelligente Systeme, skalierbare Webanwendungen und datengetriebene Lösungen entwickelt.",
+    "keywords": "Manikanta Engalligi, AI Engineer, Full Stack Entwickler, Data Science, Machine Learning, Next.js, TypeScript, React"
   },
   "nav": {
     "home": "Start",
@@ -16,7 +16,7 @@
   },
   "hero": {
     "available": "Offen für neue Möglichkeiten",
-    "name": "Manikanta Handral",
+    "name": "Manikanta Engalligi",
     "headline": "AI Engineer | Full-Stack-Entwickler | Data-Science-Enthusiast",
     "intro": "Ich entwickle intelligente Systeme, skalierbare Webanwendungen und datengetriebene Lösungen.",
     "viewProjects": "Projekte ansehen",
@@ -26,7 +26,7 @@
   "about": {
     "eyebrow": "Über mich",
     "title": "Über mich",
-    "lead": "Ich bin Manikanta Handral, Masterstudent der Informatik mit Schwerpunkt Big Data & Künstliche Intelligenz, ansässig in Leipzig, Deutschland.",
+    "lead": "Ich bin Manikanta Engalligi, Masterstudent der Informatik mit Schwerpunkt Big Data & Künstliche Intelligenz, ansässig in Leipzig, Deutschland.",
     "body": "Ich bringe praktische Erfahrung in Softwareentwicklung, KI-Systemen, DevOps-Workflows, Full-Stack-Entwicklung, Cloud-Technologien und Anwendungen des maschinellen Lernens mit. Ich entwickle mit Leidenschaft intelligente, skalierbare und wirkungsvolle digitale Produkte — von sauberen, barrierefreien Oberflächen bis hin zu robusten APIs und den Daten und Modellen, die sie antreiben.",
     "education": {
       "title": "Ausbildung",
@@ -118,6 +118,10 @@
     "subtitle": "Projekte, die Fähigkeiten in KI, maschinellem Lernen, Full-Stack-Entwicklung und Engineering zeigen.",
     "viewDetails": "Details ansehen",
     "github": "GitHub",
+    "empty": {
+      "title": "Projekte folgen in Kürze",
+      "description": "Neue Arbeiten sind in Vorbereitung und werden hier bald vorgestellt."
+    },
     "modal": {
       "overview": "Überblick",
       "problem": "Problem",
@@ -134,6 +138,7 @@
         "title": "Vital Guard – IoT-Sicherheitssystem",
         "description": "IoT-basiertes tragbares Sturzerkennungssystem mit ESP8266, MPU6050, GPS und Blynk.",
         "category": "IoT & Embedded",
+        "impact": "Ermöglicht sofortige, standortbasierte Sturzalarme, damit Hilfe gefährdete Nutzer schneller erreicht.",
         "overview": "Ein tragbares Sicherheitsgerät, das Stürze automatisch erkennt und Pflegepersonen in Echtzeit mit dem aktuellen Standort des Trägers alarmiert.",
         "problem": "Ältere und gefährdete Personen, die allein stürzen, können oft keine Hilfe rufen, wodurch aus einem beherrschbaren Vorfall ein medizinischer Notfall wird.",
         "solution": "Ein ESP8266-basiertes Wearable liest kontinuierlich Bewegungsdaten eines MPU6050-Sensors, erkennt Sturzmuster, erfasst GPS-Koordinaten und sendet über die Blynk-Plattform sofortige Alarme an Pflegepersonen.",
@@ -157,6 +162,7 @@
         "title": "Video-Anomalieerkennungssystem",
         "description": "KI-gestützte Überwachungs-Anomalieerkennung mit Transfer Learning und Deep-Learning-Techniken.",
         "category": "Computer Vision",
+        "impact": "Reduziert den manuellen Überwachungsaufwand durch automatische Anomalieerkennung auf Frame-Ebene.",
         "overview": "Ein KI-Überwachungssystem, das ungewöhnliche oder verdächtige Aktivitäten in Videostreams automatisch markiert.",
         "problem": "Die manuelle Überwachung von Aufnahmen ist mühsam und fehleranfällig, sodass kritische Anomalien häufig übersehen werden.",
         "solution": "Mithilfe von Transfer Learning auf neuronalen Faltungsnetzen lernt das System normale Muster aus Videobildern (verarbeitet mit OpenCV) und markiert Abweichungen als Anomalien.",
@@ -180,6 +186,7 @@
         "title": "SMS-Spam-Erkennungssystem",
         "description": "NLP-basiertes maschinelles Lernsystem zur Klassifizierung von Spam- und legitimen Nachrichten.",
         "category": "NLP & Maschinelles Lernen",
+        "impact": "Liefert hochpräzise Spam-Filterung mit einer leichtgewichtigen, schnellen NLP-Pipeline.",
         "overview": "Ein maschinelles Lernsystem, das Textnachrichten als Spam oder legitim (Ham) klassifiziert.",
         "problem": "Spam-Nachrichten überladen Postfächer und setzen Nutzer Phishing und Betrug aus.",
         "solution": "Nachrichten werden mit NLTK bereinigt und tokenisiert, in numerische Merkmale umgewandelt und mit scikit-learn-Modellen klassifiziert, die auf gelabelten SMS-Daten trainiert wurden.",
@@ -204,6 +211,10 @@
   "certifications": {
     "eyebrow": "Zertifikate",
     "title": "Zertifikate",
+    "empty": {
+      "title": "Zertifikate folgen in Kürze",
+      "description": "Neu erworbene Zertifikate erscheinen hier, sobald sie abgeschlossen sind."
+    },
     "items": {
       "aws": {
         "title": "AWS Cloud Practitioner Training"
@@ -244,6 +255,8 @@
     "dark": "Dunkel",
     "system": "System",
     "toggleTheme": "Erscheinungsbild umschalten",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
     "focusAreas": "Schwerpunkte",
     "status": {
       "current": "Aktuell",

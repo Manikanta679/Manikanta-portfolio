@@ -110,12 +110,20 @@
     @apply border-border outline-ring/50;
   }
 
-  html {
-    scroll-behavior: smooth;
+  /* Only enable smooth scrolling for users who haven't asked to reduce motion. */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     text-rendering: optimizeLegibility;
+  }
+
+  /* Consistent, clearly visible keyboard focus across the whole site. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
   }
 }

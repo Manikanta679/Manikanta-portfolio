@@ -3,7 +3,7 @@
 import * as React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Check, Github, Sparkles } from "lucide-react";
+import { ArrowUpRight, Check, Github, Sparkles, TrendingUp } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Badge } from "@/components/ui/badge";
@@ -87,6 +87,17 @@ export function ProjectCard({
             <p className="text-sm leading-relaxed text-muted-foreground">
               {content.description}
             </p>
+
+            {content.impact ? (
+              <p className="flex items-start gap-2 rounded-lg border border-primary/20 bg-primary/5 p-3 text-sm font-medium text-foreground">
+                <TrendingUp
+                  className="mt-0.5 size-4 shrink-0 text-primary"
+                  aria-hidden
+                />
+                <span>{content.impact}</span>
+              </p>
+            ) : null}
+
             <ul className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
                 <li key={tech}>

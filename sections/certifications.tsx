@@ -5,6 +5,7 @@ import { Section } from "@/components/section";
 import { SectionHeading } from "@/components/section-heading";
 import { Stagger, StaggerItem } from "@/components/motion/stagger";
 import { GlassCard } from "@/components/glass-card";
+import { EmptyState } from "@/components/empty-state";
 import { CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -17,12 +18,33 @@ export function Certifications() {
   const tc = useTranslations("common");
   const items = t.raw("items") as Record<string, CertificationContent>;
 
+  const visibleCertifications = certifications.filter((cert) => items[cert.id]);
+
+  if (visibleCertifications.length === 0) {
+    return (
+      <Section id="certifications" className="bg-muted/30">
+        <SectionHeading
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          align="center"
+        />
+        <div className="mt-12">
+          <EmptyState
+            icon={Award}
+            title={t("empty.title")}
+            description={t("empty.description")}
+          />
+        </div>
+      </Section>
+    );
+  }
+
   return (
     <Section id="certifications" className="bg-muted/30">
       <SectionHeading eyebrow={t("eyebrow")} title={t("title")} align="center" />
 
       <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {certifications.map((cert) => {
+        {visibleCertifications.map((cert) => {
           const content = items[cert.id];
           if (!content) return null;
 

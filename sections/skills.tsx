@@ -57,7 +57,10 @@ export function Skills() {
                   <ul className="flex flex-wrap gap-2">
                     {category.skills.map((skill) => (
                       <li key={skill}>
-                        <Badge variant="secondary" className="text-sm">
+                        <Badge
+                          variant="secondary"
+                          className="cursor-default text-sm transition-all hover:bg-primary/10 hover:text-foreground motion-safe:hover:-translate-y-0.5"
+                        >
                           {skill}
                         </Badge>
                       </li>
