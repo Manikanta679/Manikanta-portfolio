@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
@@ -24,6 +24,17 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+/**
+ * Viewport + theme-color (separated from `metadata` per Next.js 15). Drives the
+ * mobile browser chrome colour in both light and dark mode.
+ */
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
+};
+
 type LayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -34,6 +45,10 @@ export async function generateMetadata({
 }: Omit<LayoutProps, "children">): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
+
+  // With `localePrefix: "as-needed"` the default locale is served at "/",
+  // every other locale under "/<locale>". Keep canonical + hreflang in sync.
+  const canonical = locale === routing.defaultLocale ? "/" : `/${locale}`;
 
   return {
     metadataBase: new URL(siteConfig.url),
@@ -46,20 +61,32 @@ export async function generateMetadata({
     authors: [{ name: siteConfig.author.name }],
     creator: siteConfig.author.name,
     alternates: {
-      canonical: "/",
+      canonical,
       languages: {
-        en: "/en",
+        en: "/",
         de: "/de",
       },
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true },
     },
     openGraph: {
       type: "website",
       locale,
-      url: siteConfig.url,
+      url: canonical,
       title: t("title"),
       description: t("description"),
       siteName: siteConfig.name,
-      images: [{ url: siteConfig.ogImage, width: 1200, height: 630 }],
+      images: [
+        {
+          url: siteConfig.ogImage,
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
