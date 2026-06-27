@@ -1,11 +1,48 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { ArrowDown, FolderGit2, Mail } from "lucide-react";
+import {
+  ArrowDown,
+  FolderGit2,
+  Github,
+  Linkedin,
+  Mail,
+  type LucideIcon,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { EASE } from "@/components/motion/variants";
+import { siteConfig } from "@/constants/site";
+
+type HeroSocial = {
+  href: string;
+  labelKey: "linkedin" | "github" | "email";
+  icon: LucideIcon;
+  external: boolean;
+};
+
+const heroSocials: HeroSocial[] = [
+  {
+    href: siteConfig.links.linkedin,
+    labelKey: "linkedin",
+    icon: Linkedin,
+    external: true,
+  },
+  {
+    href: siteConfig.links.github,
+    labelKey: "github",
+    icon: Github,
+    external: true,
+  },
+  {
+    href: `mailto:${siteConfig.email}`,
+    labelKey: "email",
+    icon: Mail,
+    external: false,
+  },
+];
 
 const container: Variants = {
   hidden: {},
@@ -88,12 +125,13 @@ export function Hero() {
         }}
       />
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="mx-auto flex max-w-3xl flex-col items-center text-center"
-      >
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="mx-auto flex max-w-3xl flex-col items-center text-center"
+        >
         <motion.span
           variants={item}
           className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/60 bg-muted/40 px-4 py-1.5 text-sm text-muted-foreground backdrop-blur"
@@ -143,7 +181,60 @@ export function Hero() {
             </a>
           </Button>
         </motion.div>
-      </motion.div>
+
+        <motion.div
+          variants={item}
+          className="mt-6 flex flex-wrap items-center justify-center gap-3"
+        >
+          {heroSocials.map(({ href, labelKey, icon: Icon, external }) => (
+            <motion.a
+              key={labelKey}
+              href={href}
+              {...(external
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+              whileHover={reduceMotion ? undefined : { y: -3 }}
+              whileTap={reduceMotion ? undefined : { scale: 0.97 }}
+              transition={{ duration: 0.2, ease: EASE }}
+              className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/40 px-4 py-2 text-sm font-medium text-muted-foreground backdrop-blur transition-colors hover:border-primary/50 hover:text-foreground hover:shadow-[0_0_20px_-4px] hover:shadow-primary/40"
+            >
+              <Icon className="size-4" aria-hidden />
+              {t(`social.${labelKey}`)}
+            </motion.a>
+          ))}
+        </motion.div>
+        </motion.div>
+
+        {/* Profile picture — right on desktop, below the text on mobile */}
+        <motion.div
+          initial={{ opacity: 0, x: reduceMotion ? 0 : 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: EASE, delay: 0.25 }}
+          className="relative mx-auto w-full max-w-[16rem] sm:max-w-[18rem] lg:ml-auto lg:max-w-sm"
+        >
+          {/* Subtle glow behind the portrait */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -inset-4 -z-10 rounded-[2rem] bg-primary/15 blur-2xl"
+          />
+          <motion.div animate={float(10, 6)} className="will-change-transform">
+            <motion.div
+              whileHover={reduceMotion ? undefined : { scale: 1.02 }}
+              transition={{ duration: 0.3, ease: EASE }}
+              className="overflow-hidden rounded-2xl border border-border/50 bg-card/60 p-2 shadow-xl backdrop-blur-md supports-[backdrop-filter]:bg-card/50"
+            >
+              <Image
+                src="/images/profile.jpg"
+                alt={t("portraitAlt")}
+                width={800}
+                height={1000}
+                sizes="(max-width: 640px) 16rem, (max-width: 1024px) 18rem, 24rem"
+                className="h-auto w-full rounded-xl"
+              />
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </div>
 
       {/* Animated scroll indicator */}
       <motion.a

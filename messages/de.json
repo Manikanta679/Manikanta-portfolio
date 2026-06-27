@@ -17,37 +17,222 @@
   "hero": {
     "available": "Offen für neue Möglichkeiten",
     "name": "Manikanta Engalligi",
-    "headline": "AI Engineer | Full-Stack-Entwickler | Data-Science-Enthusiast",
+    "headline": "AI Engineer | Full-Stack-Entwickler | Datenanalyse",
     "intro": "Ich entwickle intelligente Systeme, skalierbare Webanwendungen und datengetriebene Lösungen.",
     "viewProjects": "Projekte ansehen",
     "contactMe": "Kontakt aufnehmen",
-    "scrollDown": "Zum Abschnitt Über mich scrollen"
+    "scrollDown": "Zum Abschnitt Über mich scrollen",
+    "portraitAlt": "Porträt von Manikanta Engalligi",
+    "social": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "E-Mail"
+    }
   },
   "about": {
     "eyebrow": "Über mich",
     "title": "Über mich",
-    "lead": "Ich bin Manikanta Engalligi, Masterstudent der Informatik mit Schwerpunkt Big Data & Künstliche Intelligenz, ansässig in Leipzig, Deutschland.",
-    "body": "Ich bringe praktische Erfahrung in Softwareentwicklung, KI-Systemen, DevOps-Workflows, Full-Stack-Entwicklung, Cloud-Technologien und Anwendungen des maschinellen Lernens mit. Ich entwickle mit Leidenschaft intelligente, skalierbare und wirkungsvolle digitale Produkte — von sauberen, barrierefreien Oberflächen bis hin zu robusten APIs und den Daten und Modellen, die sie antreiben.",
-    "education": {
-      "title": "Ausbildung",
-      "description": "M.Sc. Informatik (Big Data & Künstliche Intelligenz) an der SRH University Leipzig, aufbauend auf einem B.Sc. in Informatik."
+    "summary": {
+      "title": "Berufliches Profil",
+      "intro": "Ich bin Manikanta Engalligi – Masterstudent der Informatik mit Schwerpunkt Big Data & Künstliche Intelligenz an der SRH University Leipzig, Deutschland.",
+      "p1": "Ich entwickle skalierbare Software in den Bereichen Full-Stack-Entwicklung, Künstliche Intelligenz, Machine Learning und Datenanalyse und mache aus komplexen Ideen zuverlässige, produktionsreife Systeme.",
+      "p2": "Mich motiviert das Lösen realer Probleme mit Technologie und das kontinuierliche Verfeinern meines Handwerks durch moderne Praktiken der Softwareentwicklung."
     },
-    "careerGoals": {
-      "title": "Karriereziele",
-      "description": "KI-gestützte Produkte zu entwickeln, die in der realen Welt einen Unterschied machen, und als Ingenieur zu wachsen, der Forschung, Daten und skalierbare Anwendungsentwicklung verbindet."
+    "build": {
+      "title": "Was ich entwickle",
+      "items": {
+        "aiApps": "KI-gestützte Anwendungen",
+        "fullstack": "Full-Stack-Webplattformen",
+        "dashboards": "Data-Analytics-Dashboards",
+        "apis": "Cloud-fähige REST-APIs",
+        "automation": "Intelligente Automatisierung"
+      }
+    },
+    "languages": {
+      "title": "Sprachen",
+      "items": {
+        "english": {
+          "name": "Englisch",
+          "level": "Verhandlungssicher"
+        },
+        "german": {
+          "name": "Deutsch",
+          "level": "B1 (Lerne ich gerade)"
+        },
+        "hindi": {
+          "name": "Hindi",
+          "level": "Verhandlungssicher"
+        },
+        "kannada": {
+          "name": "Kannada",
+          "level": "Muttersprache"
+        },
+        "telugu": {
+          "name": "Telugu",
+          "level": "Verhandlungssicher"
+        }
+      }
     }
   },
   "skills": {
     "eyebrow": "Fähigkeiten",
     "title": "Fähigkeiten & Technologien",
-    "subtitle": "Ein Überblick über die Sprachen, Frameworks und Tools, mit denen ich in KI, Web und Daten arbeite.",
+    "subtitle": "Ein Überblick über die Sprachen, Frameworks und Tools, mit denen ich arbeite – klicke auf eine Technologie, um zu sehen, wo ich sie eingesetzt habe.",
     "categories": {
       "programming": "Programmierung",
       "frontend": "Frontend",
-      "backend": "Backend",
-      "aiData": "KI & Daten",
-      "databases": "Datenbanken",
-      "tools": "Tools"
+      "backend": "Backend & APIs",
+      "aiData": "KI / ML / Datenanalyse",
+      "databases": "Datenbanken & Cloud",
+      "tools": "DevOps & Tools"
+    },
+    "modal": {
+      "usedIn": "Wo ich es eingesetzt habe",
+      "workedWith": "Eingesetzt mit",
+      "responsibilities": "Aufgaben",
+      "outcome": "Ergebnis",
+      "close": "Schließen",
+      "openAria": "Ansehen, wo ich {skill} eingesetzt habe"
+    },
+    "contexts": {
+      "portfolio": "Diese Portfolio-Website (Next.js)",
+      "academic": "Studien- & Privatprojekte",
+      "fullstack": "Full-Stack-Webentwicklung",
+      "allProjects": "Versionskontrolle in jedem Projekt",
+      "devEnv": "Tägliche Entwicklungsumgebung",
+      "apiWork": "API-Entwicklung & -Tests"
+    },
+    "details": {
+      "python": {
+        "summary": "Meine wichtigste Sprache für Machine Learning und Datenarbeit – damit habe ich vollständige ML-Pipelines von A bis Z umgesetzt.",
+        "outcome": "Zwei vollständige ML-Systeme zur Anomalie- und Spam-Erkennung umgesetzt."
+      },
+      "java": {
+        "summary": "Grundlage der objektorientierten Programmierung aus meinem Informatikstudium und Studienprojekten."
+      },
+      "javascript": {
+        "summary": "Das Rückgrat meiner interaktiven Webarbeit – von Praktikums-Oberflächen bis zu Full-Stack-Projekten."
+      },
+      "typescript": {
+        "summary": "Ich nutze TypeScript im Strict-Mode für typsichere, wartbare Webanwendungen wie dieses Portfolio."
+      },
+      "csharp": {
+        "summary": "Für die Backend-API-Entwicklung mit .NET Core während meines Praktikums bei Biosoft Health Tech eingesetzt."
+      },
+      "react": {
+        "summary": "Habe während meines Engineering-Praktikums bei Biosoft Health Tech responsive, komponentenbasierte Oberflächen gebaut.",
+        "responsibilities": [
+          "Responsive UI-Entwicklung",
+          "REST-API-Integration",
+          "Authentifizierungs-Flows",
+          "Frontend-Architektur"
+        ],
+        "outcome": "Produktive UI-Funktionen mit Anbindung an Live-Backend-APIs geliefert."
+      },
+      "nextjs": {
+        "summary": "Das App-Router-Framework hinter diesem Portfolio – inklusive Server Components, i18n und SEO."
+      },
+      "tailwind": {
+        "summary": "Mein bevorzugtes Styling-System, um konsistente, responsive Oberflächen schnell zu bauen."
+      },
+      "html5": {
+        "summary": "Semantisches, barrierefreies Markup als Basis meiner Frontend- und Full-Stack-Arbeit."
+      },
+      "css3": {
+        "summary": "Modernes, responsives Styling und Layouts in meinen Webprojekten."
+      },
+      "dotnet": {
+        "summary": "Habe bei Biosoft Health Tech REST-APIs und Backend-Services mit SQL-Server-Anbindung entwickelt.",
+        "responsibilities": [
+          "REST-API-Entwicklung",
+          "Backend-Services",
+          "SQL-Server-Integration"
+        ],
+        "outcome": "Authentifizierte REST-Endpunkte mit SQL-Server-Anbindung geliefert."
+      },
+      "nodejs": {
+        "summary": "Serverseitiges JavaScript für APIs und Backends von Full-Stack-Projekten."
+      },
+      "express": {
+        "summary": "Leichtgewichtige API- und Routing-Schicht für meine Node.js-Backends."
+      },
+      "rest": {
+        "summary": "REST-APIs in meiner Praktikumsarbeit entworfen und integriert – Verbindung von Frontend und Backend.",
+        "responsibilities": [
+          "API-Design",
+          "Frontend-Backend-Integration",
+          "API-Tests mit Postman"
+        ]
+      },
+      "ml": {
+        "summary": "Machine-Learning-Modelle für Klassifizierungs- und Erkennungsprojekte entworfen und trainiert.",
+        "outcome": "Funktionierende Klassifizierungs- und Erkennungsmodelle mit hoher Genauigkeit geliefert."
+      },
+      "deeplearning": {
+        "summary": "Tiefe neuronale Netze und Transfer Learning für die Anomalieerkennung im Bereich Computer Vision eingesetzt.",
+        "outcome": "Automatische Anomalieerkennung auf Frame-Ebene aus Videos ermöglicht."
+      },
+      "tensorflow": {
+        "summary": "Zum Erstellen und Trainieren der Deep-Learning-Modelle in meinem Projekt zur Video-Anomalieerkennung genutzt."
+      },
+      "opencv": {
+        "summary": "Verantwortlich für Bildextraktion und Vorverarbeitung in meiner Computer-Vision-Pipeline."
+      },
+      "nlp": {
+        "summary": "Textverarbeitungs- und Klassifizierungs-Pipelines für mein SMS-Spam-Erkennungsprojekt gebaut."
+      },
+      "scikit": {
+        "summary": "Klassische ML-Klassifikatoren für mein Spam-Erkennungssystem trainiert und evaluiert."
+      },
+      "dataanalytics": {
+        "summary": "Daten analysieren und interpretieren – gestützt durch mein Data-Analytics-Praktikumszertifikat und mein Big-Data-Studium."
+      },
+      "sqlserver": {
+        "summary": "Relationale Datenspeicherung für Backend-APIs bei Biosoft Health Tech entworfen und integriert."
+      },
+      "mysql": {
+        "summary": "Relationales Datenbankdesign und Abfragen für Studien- und Privatprojekte."
+      },
+      "mongodb": {
+        "summary": "Dokumentbasierte Datenspeicherung für Full-Stack-JavaScript-Projekte."
+      },
+      "postgresql": {
+        "summary": "Relationale Datenbank für die Datenschicht dieses Portfolios über Supabase."
+      },
+      "git": {
+        "summary": "Versionskontrolle in jedem Projekt und zur Zusammenarbeit während meiner Praktika.",
+        "responsibilities": [
+          "Versionskontrolle",
+          "Branching-Workflows",
+          "Zusammenarbeit im Praktikum"
+        ]
+      },
+      "docker": {
+        "summary": "Anwendungen containerisiert und Workflows während meines DevOps-Praktikums bei Moka Software optimiert.",
+        "responsibilities": [
+          "Containerisierung",
+          "Einrichtung des Entwicklungs-Workflows"
+        ],
+        "outcome": "Lokale und Deployment-Umgebungen für das Team vereinheitlicht."
+      },
+      "linux": {
+        "summary": "Meine tägliche Umgebung für Entwicklung und DevOps-Aufgaben."
+      },
+      "postman": {
+        "summary": "REST-APIs während der Backend-Entwicklung entworfen, getestet und debuggt."
+      },
+      "vscode": {
+        "summary": "Mein primärer Code-Editor für alle Entwicklungsarbeiten."
+      },
+      "cicd": {
+        "summary": "CI/CD-Pipelines und Deployment-Workflows während meines DevOps-Praktikums bei Moka Software aufgebaut und betreut.",
+        "responsibilities": [
+          "CI/CD-Workflows",
+          "Deployment-Unterstützung",
+          "Produktions-Monitoring"
+        ],
+        "outcome": "Build-, Test- und Deployment-Schritte für schnellere Releases automatisiert."
+      }
     }
   },
   "education": {

@@ -37,10 +37,10 @@ export default async function HomePage({ params }: PageProps) {
       <main>
         <Hero />
         <About />
-        <Skills />
         <Education />
         <Experience />
         <Projects />
+        <Skills />
         <Certifications />
         <Resume />
         <Contact />

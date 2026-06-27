@@ -17,37 +17,222 @@
   "hero": {
     "available": "Available for opportunities",
     "name": "Manikanta Engalligi",
-    "headline": "AI Engineer | Full Stack Developer | Data Science Enthusiast",
+    "headline": "AI Engineer | Full-Stack Developer | Data Analytics",
     "intro": "Building intelligent systems, scalable web applications, and data-driven solutions.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me",
-    "scrollDown": "Scroll to About section"
+    "scrollDown": "Scroll to About section",
+    "portraitAlt": "Portrait of Manikanta Engalligi",
+    "social": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Email"
+    }
   },
   "about": {
     "eyebrow": "About",
     "title": "About Me",
-    "lead": "I'm Manikanta Engalligi, a Master's student in Computer Science specializing in Big Data & Artificial Intelligence, based in Leipzig, Germany.",
-    "body": "I bring hands-on experience across software engineering, AI systems, DevOps workflows, full-stack development, cloud technologies and machine learning applications. I'm passionate about building intelligent, scalable and impactful digital products — from clean, accessible interfaces to robust APIs and the data and models that power them.",
-    "education": {
-      "title": "Education",
-      "description": "M.Sc. Computer Science (Big Data & Artificial Intelligence) at SRH University Leipzig, building on a B.Sc. in Computer Science."
+    "summary": {
+      "title": "Professional Summary",
+      "intro": "I'm Manikanta Engalligi — a Master's student in Computer Science specializing in Big Data & Artificial Intelligence at SRH University Leipzig, Germany.",
+      "p1": "I build scalable software across full-stack development, artificial intelligence, machine learning, and data analytics, turning complex ideas into reliable, production-ready systems.",
+      "p2": "I'm driven by solving real-world problems with technology and continuously sharpening my craft through modern software engineering practices."
     },
-    "careerGoals": {
-      "title": "Career Goals",
-      "description": "To build AI-powered products that create real-world impact, while growing as an engineer who bridges research, data and scalable application development."
+    "build": {
+      "title": "What I Build",
+      "items": {
+        "aiApps": "AI-powered Applications",
+        "fullstack": "Full-Stack Web Platforms",
+        "dashboards": "Data Analytics Dashboards",
+        "apis": "Cloud-ready REST APIs",
+        "automation": "Intelligent Automation"
+      }
+    },
+    "languages": {
+      "title": "Languages",
+      "items": {
+        "english": {
+          "name": "English",
+          "level": "Professional"
+        },
+        "german": {
+          "name": "German",
+          "level": "B1 (Currently Learning)"
+        },
+        "hindi": {
+          "name": "Hindi",
+          "level": "Professional"
+        },
+        "kannada": {
+          "name": "Kannada",
+          "level": "Native"
+        },
+        "telugu": {
+          "name": "Telugu",
+          "level": "Professional"
+        }
+      }
     }
   },
   "skills": {
     "eyebrow": "Skills",
     "title": "Skills & Technologies",
-    "subtitle": "A snapshot of the languages, frameworks and tools I work with across AI, the web and data.",
+    "subtitle": "A snapshot of the languages, frameworks and tools I work with — click any technology to see where I used it.",
     "categories": {
       "programming": "Programming",
       "frontend": "Frontend",
-      "backend": "Backend",
-      "aiData": "AI & Data",
-      "databases": "Databases",
-      "tools": "Tools"
+      "backend": "Backend & APIs",
+      "aiData": "AI / ML / Data Analytics",
+      "databases": "Databases & Cloud",
+      "tools": "DevOps & Tools"
+    },
+    "modal": {
+      "usedIn": "Where I used it",
+      "workedWith": "Worked with",
+      "responsibilities": "Responsibilities",
+      "outcome": "Outcome",
+      "close": "Close",
+      "openAria": "View where I used {skill}"
+    },
+    "contexts": {
+      "portfolio": "This portfolio website (Next.js)",
+      "academic": "Academic & personal projects",
+      "fullstack": "Full-stack web development",
+      "allProjects": "Version control across every project",
+      "devEnv": "Daily development environment",
+      "apiWork": "API development & testing"
+    },
+    "details": {
+      "python": {
+        "summary": "My primary language for machine learning and data work — I used it to build complete ML pipelines end to end.",
+        "outcome": "Delivered two complete ML systems for anomaly and spam detection."
+      },
+      "java": {
+        "summary": "Object-oriented programming foundation from my computer science studies and coursework projects."
+      },
+      "javascript": {
+        "summary": "The backbone of my interactive web work, from internship UIs to full-stack side projects."
+      },
+      "typescript": {
+        "summary": "I use TypeScript in strict mode to build type-safe, maintainable web applications like this portfolio."
+      },
+      "csharp": {
+        "summary": "Used for backend API development with .NET Core during my internship at Biosoft Health Tech."
+      },
+      "react": {
+        "summary": "Built responsive, component-based user interfaces during my engineering internship at Biosoft Health Tech.",
+        "responsibilities": [
+          "Responsive UI development",
+          "REST API integration",
+          "Authentication flows",
+          "Frontend architecture"
+        ],
+        "outcome": "Delivered production UI features integrated with live backend APIs."
+      },
+      "nextjs": {
+        "summary": "The App Router framework behind this portfolio — server components, i18n and SEO included."
+      },
+      "tailwind": {
+        "summary": "My styling system of choice for building consistent, responsive interfaces quickly."
+      },
+      "html5": {
+        "summary": "Semantic, accessible markup underpinning my frontend and full-stack work."
+      },
+      "css3": {
+        "summary": "Modern, responsive styling and layouts across my web projects."
+      },
+      "dotnet": {
+        "summary": "Built REST APIs and backend services integrated with SQL Server at Biosoft Health Tech.",
+        "responsibilities": [
+          "REST API development",
+          "Backend services",
+          "SQL Server integration"
+        ],
+        "outcome": "Delivered authenticated REST endpoints backed by SQL Server."
+      },
+      "nodejs": {
+        "summary": "Server-side JavaScript for building APIs and full-stack project backends."
+      },
+      "express": {
+        "summary": "Lightweight API and routing layer for my Node.js backends."
+      },
+      "rest": {
+        "summary": "Designed and integrated REST APIs across my internship work, connecting frontends to backend services.",
+        "responsibilities": [
+          "API design",
+          "Frontend–backend integration",
+          "API testing with Postman"
+        ]
+      },
+      "ml": {
+        "summary": "Designed and trained machine-learning models for classification and detection projects.",
+        "outcome": "Shipped working classification and detection models with strong accuracy."
+      },
+      "deeplearning": {
+        "summary": "Applied deep neural networks and transfer learning for computer-vision anomaly detection.",
+        "outcome": "Enabled automated, frame-level anomaly detection from video."
+      },
+      "tensorflow": {
+        "summary": "Used to build and train the deep-learning models in my Video Anomaly Detection project."
+      },
+      "opencv": {
+        "summary": "Handled video frame extraction and image preprocessing for my computer-vision pipeline."
+      },
+      "nlp": {
+        "summary": "Built text-processing and classification pipelines for my SMS Spam Detection project."
+      },
+      "scikit": {
+        "summary": "Trained and evaluated classical ML classifiers for my spam-detection system."
+      },
+      "dataanalytics": {
+        "summary": "Analysing and interpreting data — reinforced by my Data Analytics internship certification and Big Data studies."
+      },
+      "sqlserver": {
+        "summary": "Designed and integrated relational data storage for backend APIs at Biosoft Health Tech."
+      },
+      "mysql": {
+        "summary": "Relational database design and queries for academic and personal projects."
+      },
+      "mongodb": {
+        "summary": "Document-based data storage for full-stack JavaScript projects."
+      },
+      "postgresql": {
+        "summary": "Relational database powering the data layer of this portfolio via Supabase."
+      },
+      "git": {
+        "summary": "Version control on every project and for collaboration during my internships.",
+        "responsibilities": [
+          "Version control",
+          "Branching workflows",
+          "Internship collaboration"
+        ]
+      },
+      "docker": {
+        "summary": "Containerised applications and streamlined workflows during my DevOps internship at Moka Software.",
+        "responsibilities": [
+          "Containerization",
+          "Development workflow setup"
+        ],
+        "outcome": "Standardised local and deployment environments for the team."
+      },
+      "linux": {
+        "summary": "My day-to-day environment for development and DevOps tasks."
+      },
+      "postman": {
+        "summary": "Designing, testing and debugging REST APIs during backend development."
+      },
+      "vscode": {
+        "summary": "My primary code editor across all development work."
+      },
+      "cicd": {
+        "summary": "Built and maintained CI/CD pipelines and deployment workflows during my DevOps internship at Moka Software.",
+        "responsibilities": [
+          "CI/CD workflows",
+          "Deployment support",
+          "Production monitoring"
+        ],
+        "outcome": "Automated build, test and deployment steps for faster releases."
+      }
     }
   },
   "education": {
