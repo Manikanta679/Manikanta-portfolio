@@ -29,7 +29,7 @@ export function About() {
 
   return (
     <Section id="about">
-      <SectionHeading eyebrow={t("eyebrow")} title={t("title")} align="center" />
+      <SectionHeading title={t("title")} align="center" />
 
       <div className="mt-12 grid gap-8 lg:grid-cols-5 lg:items-stretch">
         {/* Left: professional summary */}

@@ -1,7 +1,8 @@
 /**
  * Experience entries (structural data only).
  *
- * Translatable content (role, company, period, highlights) lives in the
+ * Translatable content (role, company, location, period, technologies,
+ * responsibilities, contributions, projects) lives in the
  * `experience.items.<id>` namespace of the message files.
  */
 export type ExperienceEntry = {
@@ -17,6 +18,11 @@ export const experience: ExperienceEntry[] = [
 export type ExperienceContent = {
   role: string;
   company: string;
+  location: string;
   period: string;
-  highlights: string[];
+  technologies: string[];
+  responsibilities: string[];
+  contributions: string[];
+  /** Optional named projects worked on during the role. */
+  projects?: string[];
 };

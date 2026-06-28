@@ -3,7 +3,21 @@
 import * as React from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Check, Github, TrendingUp, X } from "lucide-react";
+import {
+  Blocks,
+  Check,
+  CircleCheckBig,
+  ExternalLink,
+  Github,
+  Layers,
+  ListChecks,
+  Puzzle,
+  Sparkles,
+  Target,
+  TriangleAlert,
+  X,
+  type LucideIcon,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Badge } from "@/components/ui/badge";
@@ -15,27 +29,55 @@ type ProjectModalProps = {
   open: boolean;
   onClose: () => void;
   content: ProjectContent;
-  technologies: readonly string[];
-  github: string;
+  github?: string;
+  liveDemo?: string;
   status: ProjectStatus;
 };
 
-const statusKey: Record<ProjectStatus, "completed" | "inProgress"> = {
+const statusKey: Record<ProjectStatus, string> = {
+  latest: "latest",
   completed: "completed",
   "in-progress": "inProgress",
 };
 
+/** Section wrapper with an icon heading and an elegant top separator. */
+function CaseSection({
+  icon: Icon,
+  title,
+  children,
+  divider = true,
+}: {
+  icon: LucideIcon;
+  title: string;
+  children: React.ReactNode;
+  divider?: boolean;
+}) {
+  return (
+    <section
+      className={
+        divider ? "border-t border-border/60 pt-6" : undefined
+      }
+    >
+      <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary">
+        <Icon className="size-4" aria-hidden />
+        {title}
+      </h3>
+      {children}
+    </section>
+  );
+}
+
 /**
- * Reusable, accessible project details modal rendered in a portal.
- * Closes on Escape, backdrop click and the close button; locks body scroll and
- * moves focus to the close control while open.
+ * Premium project case-study modal rendered in a portal. Closes on Escape,
+ * backdrop click and the close button; locks body scroll and traps focus while
+ * open. GitHub / Live Demo buttons render only when a real URL is provided.
  */
 export function ProjectModal({
   open,
   onClose,
   content,
-  technologies,
   github,
+  liveDemo,
   status,
 }: ProjectModalProps) {
   const t = useTranslations("projects");
@@ -82,7 +124,6 @@ export function ProjectModal({
     };
 
     window.addEventListener("keydown", onKeyDown);
-    // Move focus into the dialog.
     const id = window.setTimeout(() => closeRef.current?.focus(), 0);
 
     return () => {
@@ -93,19 +134,9 @@ export function ProjectModal({
   }, [open, onClose]);
 
   const hasGithub = Boolean(github && github !== "#");
-
-  const lists: { heading: string; items: string[] }[] = [
-    { heading: t("modal.achievements"), items: content.achievements },
-    { heading: t("modal.challenges"), items: content.challenges },
-    { heading: t("modal.futureImprovements"), items: content.futureImprovements },
-  ];
-
-  const paragraphs: { heading: string; body: string }[] = [
-    { heading: t("modal.overview"), body: content.overview },
-    { heading: t("modal.problem"), body: content.problem },
-    { heading: t("modal.solution"), body: content.solution },
-    { heading: t("modal.architecture"), body: content.architecture },
-  ];
+  const hasLiveDemo = Boolean(liveDemo && liveDemo !== "#");
+  const hasLinks = hasGithub || hasLiveDemo;
+  const isLatest = status === "latest";
 
   if (!mounted) return null;
 
@@ -130,112 +161,210 @@ export function ProjectModal({
             aria-modal="true"
             aria-labelledby={titleId}
             tabIndex={-1}
-            className="relative z-10 flex max-h-[85vh] w-full max-w-2xl flex-col overflow-hidden rounded-2xl border border-border/60 bg-card shadow-2xl"
+            className="relative z-10 flex max-h-[88vh] w-full max-w-3xl flex-col overflow-hidden rounded-2xl border border-border/60 bg-card shadow-2xl"
             initial={{ opacity: 0, scale: 0.95, y: 16 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.97, y: 8 }}
             transition={{ duration: 0.25, ease: EASE }}
           >
             {/* Header */}
-            <div className="flex items-start justify-between gap-4 border-b border-border/60 p-6">
-              <div className="space-y-2">
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge variant="secondary">{content.category}</Badge>
-                  <Badge className="gap-1">
-                    <Check className="size-3" />
-                    {tc(`status.${statusKey[status]}`)}
-                  </Badge>
+            <div className="relative shrink-0 overflow-hidden border-b border-border/60 p-6">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -right-16 -top-20 size-48 rounded-full bg-primary/10 blur-3xl"
+              />
+              <div className="relative flex items-start justify-between gap-4">
+                <div className="space-y-2.5">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <Badge variant="secondary">{content.category}</Badge>
+                    <Badge
+                      variant={isLatest ? "default" : "secondary"}
+                      className="gap-1"
+                    >
+                      {isLatest ? (
+                        <Sparkles className="size-3" />
+                      ) : (
+                        <Check className="size-3" />
+                      )}
+                      {tc(`status.${statusKey[status]}`)}
+                    </Badge>
+                  </div>
+                  <h2
+                    id={titleId}
+                    className="text-xl font-bold tracking-tight sm:text-2xl"
+                  >
+                    {content.title}
+                  </h2>
+                  <p className="text-sm text-muted-foreground sm:text-base">
+                    {content.subtitle}
+                  </p>
                 </div>
-                <h2
-                  id={titleId}
-                  className="text-xl font-bold tracking-tight sm:text-2xl"
+                <Button
+                  ref={closeRef}
+                  variant="ghost"
+                  size="icon"
+                  onClick={onClose}
+                  aria-label={t("modal.close")}
+                  className="shrink-0"
                 >
-                  {content.title}
-                </h2>
+                  <X className="size-5" />
+                </Button>
               </div>
-              <Button
-                ref={closeRef}
-                variant="ghost"
-                size="icon"
-                onClick={onClose}
-                aria-label={t("modal.close")}
-              >
-                <X className="size-5" />
-              </Button>
             </div>
 
             {/* Body */}
             <div className="flex-1 space-y-6 overflow-y-auto p-6">
-              {content.impact ? (
-                <p className="flex items-start gap-2 rounded-lg border border-primary/20 bg-primary/5 p-3 text-sm font-medium text-foreground">
-                  <TrendingUp
-                    className="mt-0.5 size-4 shrink-0 text-primary"
-                    aria-hidden
-                  />
-                  <span>{content.impact}</span>
-                </p>
-              ) : null}
+              {/* Overview */}
+              <p className="text-sm leading-relaxed text-foreground/90 sm:text-base">
+                {content.overview}
+              </p>
 
-              {paragraphs.map(({ heading, body }) => (
-                <section key={heading} className="space-y-1.5">
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">
-                    {heading}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {body}
-                  </p>
-                </section>
-              ))}
-
-              <section className="space-y-2">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">
-                  {t("modal.technologies")}
-                </h3>
-                <ul className="flex flex-wrap gap-2">
-                  {technologies.map((tech) => (
-                    <li key={tech}>
-                      <Badge variant="outline">{tech}</Badge>
+              {/* Key Features */}
+              <CaseSection icon={Sparkles} title={t("modal.features")}>
+                <ul className="grid gap-2 sm:grid-cols-2">
+                  {content.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-start gap-2 text-sm text-muted-foreground"
+                    >
+                      <Check className="mt-0.5 size-4 shrink-0 text-primary" />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-              </section>
+              </CaseSection>
 
-              {lists.map(({ heading, items }) => (
-                <section key={heading} className="space-y-2">
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">
-                    {heading}
-                  </h3>
-                  <ul className="space-y-2">
-                    {items.map((line) => (
-                      <li
-                        key={line}
-                        className="flex items-start gap-2 text-sm text-muted-foreground"
-                      >
-                        <Check className="mt-0.5 size-4 shrink-0 text-primary" />
-                        <span>{line}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              ))}
+              {/* Architecture & System Design */}
+              <CaseSection icon={Layers} title={t("modal.architecture")}>
+                <ul className="space-y-3">
+                  {content.architecture.map((item) => (
+                    <li
+                      key={item.name}
+                      className="rounded-lg border border-border/50 bg-muted/30 p-3"
+                    >
+                      <p className="text-sm font-semibold text-foreground">
+                        {item.name}
+                      </p>
+                      <p className="mt-0.5 text-sm leading-relaxed text-muted-foreground">
+                        {item.description}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </CaseSection>
+
+              {/* Technology Stack */}
+              <CaseSection icon={Blocks} title={t("modal.stack")}>
+                <div className="space-y-3">
+                  {content.stack.map((group) => (
+                    <div
+                      key={group.label}
+                      className="flex flex-col gap-2 sm:flex-row sm:items-start"
+                    >
+                      <span className="shrink-0 text-xs font-semibold uppercase tracking-wider text-muted-foreground sm:w-40 sm:pt-1.5">
+                        {group.label}
+                      </span>
+                      <ul className="flex flex-wrap gap-2">
+                        {group.items.map((tech) => (
+                          <li key={tech}>
+                            <Badge variant="outline">{tech}</Badge>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </CaseSection>
+
+              {/* Core Modules */}
+              <CaseSection icon={Puzzle} title={t("modal.modules")}>
+                <ul className="grid gap-3 sm:grid-cols-2">
+                  {content.modules.map((mod) => (
+                    <li
+                      key={mod.name}
+                      className="rounded-lg border border-border/50 p-3 transition-colors hover:border-primary/40"
+                    >
+                      <p className="text-sm font-semibold text-foreground">
+                        {mod.name}
+                      </p>
+                      <p className="mt-0.5 text-sm leading-relaxed text-muted-foreground">
+                        {mod.description}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </CaseSection>
+
+              {/* Key Contributions */}
+              <CaseSection icon={ListChecks} title={t("modal.contributions")}>
+                <ul className="space-y-2">
+                  {content.contributions.map((line) => (
+                    <li
+                      key={line}
+                      className="flex items-start gap-2 text-sm text-foreground/80"
+                    >
+                      <CircleCheckBig className="mt-0.5 size-4 shrink-0 text-primary" />
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CaseSection>
+
+              {/* Challenges Solved */}
+              <CaseSection icon={TriangleAlert} title={t("modal.challenges")}>
+                <ul className="space-y-2">
+                  {content.challenges.map((line) => (
+                    <li
+                      key={line}
+                      className="flex items-start gap-2 text-sm text-muted-foreground"
+                    >
+                      <span
+                        className="mt-1.5 size-1.5 shrink-0 rounded-full bg-primary/60"
+                        aria-hidden
+                      />
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CaseSection>
+
+              {/* Outcome & Results */}
+              <CaseSection icon={Target} title={t("modal.outcomes")}>
+                <ul className="space-y-2">
+                  {content.outcomes.map((line) => (
+                    <li
+                      key={line}
+                      className="flex items-start gap-2 text-sm text-foreground/80"
+                    >
+                      <Check className="mt-0.5 size-4 shrink-0 text-primary" />
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CaseSection>
             </div>
 
-            {/* Footer */}
-            <div className="flex justify-end gap-3 border-t border-border/60 p-6">
-              {hasGithub ? (
-                <Button asChild variant="outline">
-                  <a href={github} target="_blank" rel="noopener noreferrer">
-                    <Github />
-                    {t("github")}
-                  </a>
-                </Button>
-              ) : (
-                <Button variant="outline" disabled>
-                  <Github />
-                  {t("github")}
-                </Button>
-              )}
-            </div>
+            {/* Footer (only when real links exist) */}
+            {hasLinks ? (
+              <div className="flex shrink-0 flex-wrap justify-end gap-3 border-t border-border/60 p-6">
+                {hasGithub ? (
+                  <Button asChild variant="outline">
+                    <a href={github} target="_blank" rel="noopener noreferrer">
+                      <Github />
+                      {t("github")}
+                    </a>
+                  </Button>
+                ) : null}
+                {hasLiveDemo ? (
+                  <Button asChild className="w-full sm:w-auto">
+                    <a href={liveDemo} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink />
+                      {t("liveApplication")}
+                    </a>
+                  </Button>
+                ) : null}
+              </div>
+            ) : null}
           </motion.div>
         </div>
       ) : null}

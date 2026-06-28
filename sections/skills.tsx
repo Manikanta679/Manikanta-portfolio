@@ -10,7 +10,6 @@ export function Skills() {
   return (
     <Section id="skills" className="bg-muted/30">
       <SectionHeading
-        eyebrow={t("eyebrow")}
         title={t("title")}
         description={t("subtitle")}
         align="center"

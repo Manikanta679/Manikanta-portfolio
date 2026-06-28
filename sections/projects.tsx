@@ -18,7 +18,6 @@ export function Projects() {
   return (
     <Section id="projects">
       <SectionHeading
-        eyebrow={t("eyebrow")}
         title={t("title")}
         description={t("subtitle")}
         align="center"

@@ -12,6 +12,14 @@ export const siteConfig = {
   resumeUrl: "/resume/Manikanta_Engalligi_Cv.pdf",
   email: "manikantahandral@gmail.com",
   location: "Leipzig, Germany",
+  phone: {
+    display: "+49 17632273858",
+    href: "tel:+4917632273858",
+  },
+  whatsapp: {
+    display: "+91 7019669766",
+    href: "https://wa.me/917019669766",
+  },
   author: {
     name: "Manikanta Engalligi",
   },

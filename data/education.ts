@@ -5,7 +5,7 @@
  * `education.items.<id>` namespace of the message files and is read via
  * `t.raw("items")` in the section.
  */
-export type EducationStatus = "current" | "completed";
+export type EducationStatus = "current" | "completed" | "graduated";
 
 export type EducationEntry = {
   id: string;
@@ -14,7 +14,7 @@ export type EducationEntry = {
 
 export const education: EducationEntry[] = [
   { id: "msc", status: "current" },
-  { id: "bsc", status: "completed" },
+  { id: "bsc", status: "graduated" },
 ];
 
 /** Shape of a single translated education entry (from messages). */

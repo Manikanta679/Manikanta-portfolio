@@ -44,7 +44,11 @@ export const skillCategories: SkillCategory[] = [
         key: "python",
         name: "Python",
         usage: {
-          projects: ["video-anomaly-detection", "sms-spam-detection"],
+          projects: [
+            "data-analysis-toolkit",
+            "video-anomaly-detection",
+            "sms-spam-detection",
+          ],
           contexts: ["academic"],
           usedWith: ["TensorFlow", "OpenCV", "Scikit-learn", "NLP"],
         },
@@ -70,7 +74,10 @@ export const skillCategories: SkillCategory[] = [
       {
         key: "csharp",
         name: "C#",
-        usage: { experience: ["biosoft"], usedWith: [".NET Core", "REST APIs"] },
+        usage: {
+          experience: ["biosoft"],
+          usedWith: [".NET Core Web API", "REST APIs"],
+        },
       },
     ],
   },
@@ -86,6 +93,7 @@ export const skillCategories: SkillCategory[] = [
         key: "nextjs",
         name: "Next.js",
         usage: {
+          projects: ["data-analysis-toolkit"],
           contexts: ["portfolio"],
           usedWith: ["React.js", "TypeScript", "Tailwind CSS"],
         },
@@ -93,7 +101,11 @@ export const skillCategories: SkillCategory[] = [
       {
         key: "tailwind",
         name: "Tailwind CSS",
-        usage: { contexts: ["portfolio"], usedWith: ["Next.js", "React.js"] },
+        usage: {
+          projects: ["data-analysis-toolkit"],
+          contexts: ["portfolio"],
+          usedWith: ["Next.js", "React.js"],
+        },
       },
       {
         key: "html5",
@@ -120,10 +132,10 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       {
         key: "dotnet",
-        name: ".NET Core",
+        name: ".NET Core Web API",
         usage: {
           experience: ["biosoft"],
-          usedWith: ["C#", "SQL Server", "REST APIs"],
+          usedWith: ["C#", "SQL Server", "REST APIs", "Swagger"],
         },
       },
       {
@@ -147,7 +159,7 @@ export const skillCategories: SkillCategory[] = [
         name: "REST APIs",
         usage: {
           experience: ["biosoft", "moka"],
-          usedWith: [".NET Core", "Postman"],
+          usedWith: [".NET Core Web API", "Postman", "Swagger"],
         },
       },
     ],
@@ -188,14 +200,6 @@ export const skillCategories: SkillCategory[] = [
         },
       },
       {
-        key: "nlp",
-        name: "NLP",
-        usage: {
-          projects: ["sms-spam-detection"],
-          usedWith: ["Python", "Scikit-learn"],
-        },
-      },
-      {
         key: "scikit",
         name: "Scikit-learn",
         usage: {
@@ -204,9 +208,29 @@ export const skillCategories: SkillCategory[] = [
         },
       },
       {
+        key: "nlp",
+        name: "NLP",
+        usage: {
+          projects: ["sms-spam-detection"],
+          usedWith: ["Python", "Scikit-learn"],
+        },
+      },
+      {
         key: "dataanalytics",
         name: "Data Analytics",
-        usage: { contexts: ["academic"], usedWith: ["Python"] },
+        usage: {
+          projects: ["data-analysis-toolkit"],
+          contexts: ["academic"],
+          usedWith: ["Python", "Next.js"],
+        },
+      },
+      {
+        key: "transferlearning",
+        name: "Transfer Learning",
+        usage: {
+          projects: ["video-anomaly-detection"],
+          usedWith: ["TensorFlow", "Deep Learning", "Python"],
+        },
       },
     ],
   },
@@ -216,7 +240,15 @@ export const skillCategories: SkillCategory[] = [
       {
         key: "sqlserver",
         name: "SQL Server",
-        usage: { experience: ["biosoft"], usedWith: [".NET Core", "REST APIs"] },
+        usage: {
+          experience: ["biosoft"],
+          usedWith: [".NET Core Web API", "REST APIs"],
+        },
+      },
+      {
+        key: "postgresql",
+        name: "PostgreSQL",
+        usage: { contexts: ["portfolio"] },
       },
       { key: "mysql", name: "MySQL", usage: { contexts: ["academic"] } },
       {
@@ -228,9 +260,12 @@ export const skillCategories: SkillCategory[] = [
         },
       },
       {
-        key: "postgresql",
-        name: "PostgreSQL",
-        usage: { contexts: ["portfolio"] },
+        key: "blynk",
+        name: "Blynk IoT",
+        usage: {
+          projects: ["vital-guard"],
+          usedWith: ["ESP8266", "IoT"],
+        },
       },
     ],
   },
@@ -241,6 +276,15 @@ export const skillCategories: SkillCategory[] = [
         key: "git",
         name: "Git",
         usage: { experience: ["moka", "biosoft"], contexts: ["allProjects"] },
+      },
+      {
+        key: "github",
+        name: "GitHub",
+        usage: {
+          experience: ["moka", "biosoft"],
+          contexts: ["allProjects"],
+          usedWith: ["Git", "CI/CD"],
+        },
       },
       {
         key: "docker",
@@ -262,14 +306,23 @@ export const skillCategories: SkillCategory[] = [
         usage: {
           experience: ["biosoft"],
           contexts: ["apiWork"],
-          usedWith: ["REST APIs", ".NET Core"],
+          usedWith: ["REST APIs", ".NET Core Web API"],
         },
       },
       { key: "vscode", name: "VS Code", usage: { contexts: ["devEnv"] } },
       {
         key: "cicd",
         name: "CI/CD",
-        usage: { experience: ["moka"], usedWith: ["Docker"] },
+        usage: { experience: ["moka"], usedWith: ["Docker", "GitHub"] },
+      },
+      {
+        key: "swagger",
+        name: "Swagger",
+        usage: {
+          experience: ["biosoft"],
+          contexts: ["apiWork"],
+          usedWith: ["REST APIs", ".NET Core Web API"],
+        },
       },
     ],
   },

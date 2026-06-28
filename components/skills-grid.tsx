@@ -97,24 +97,24 @@ export function SkillsGrid() {
 
   return (
     <>
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {skillCategories.map((category, i) => {
           const Icon = categoryIcons[category.categoryKey] ?? Boxes;
           return (
-            <Reveal key={category.categoryKey} delay={0.06 * i}>
-              <Card className="group h-full transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-md">
-                <CardHeader>
+            <Reveal key={category.categoryKey} delay={0.06 * i} className="h-full">
+              <Card className="group flex h-full flex-col transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-md">
+                <CardHeader className="pb-4">
                   <div className="flex items-center gap-3">
-                    <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                       <Icon className="size-5" />
                     </span>
-                    <CardTitle className="text-base">
+                    <CardTitle className="text-base leading-snug">
                       {t(`categories.${category.categoryKey}`)}
                     </CardTitle>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <ul className="flex flex-wrap gap-2">
+                <CardContent className="flex flex-1 flex-col pt-0 pb-6">
+                  <ul className="flex flex-wrap content-start gap-2">
                     {category.skills.map((skill) => {
                       const isActive = selected?.key === skill.key;
                       return (
@@ -129,7 +129,7 @@ export function SkillsGrid() {
                               skill: skill.name,
                             })}
                             className={cn(
-                              "inline-flex items-center rounded-md border px-2.5 py-1 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                              "inline-flex items-center rounded-md border px-2.5 py-1.5 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                               isActive
                                 ? "border-primary bg-primary/15 text-foreground shadow-sm shadow-primary/20"
                                 : "border-transparent bg-secondary text-secondary-foreground hover:border-primary/40 hover:bg-primary/10 hover:text-foreground hover:shadow-md hover:shadow-primary/10"

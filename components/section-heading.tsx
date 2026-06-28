@@ -2,8 +2,6 @@ import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/motion/reveal";
 
 type SectionHeadingProps = {
-  /** Small eyebrow label shown above the title. */
-  eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
@@ -14,7 +12,6 @@ type SectionHeadingProps = {
  * Consistent, animated section heading used across all sections.
  */
 export function SectionHeading({
-  eyebrow,
   title,
   description,
   align = "center",
@@ -23,16 +20,11 @@ export function SectionHeading({
   return (
     <Reveal
       className={cn(
-        "flex flex-col gap-3",
+        "flex flex-col gap-4 pb-2",
         align === "center" ? "items-center text-center" : "items-start",
         className
       )}
     >
-      {eyebrow ? (
-        <span className="text-sm font-semibold uppercase tracking-widest text-primary/80">
-          {eyebrow}
-        </span>
-      ) : null}
       <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
       {description ? (
         <p

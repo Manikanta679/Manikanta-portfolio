@@ -3,30 +3,44 @@
 import * as React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Check, Github, Sparkles, TrendingUp } from "lucide-react";
+import {
+  ArrowUpRight,
+  Check,
+  ExternalLink,
+  Github,
+  Sparkles,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardFooter,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import { ProjectCardFooter } from "@/components/project-card-footer";
 import { ProjectModal } from "@/components/project-modal";
 import { EASE } from "@/components/motion/variants";
 import type { Project, ProjectContent, ProjectStatus } from "@/data/projects";
 
-const statusKey: Record<ProjectStatus, "completed" | "inProgress"> = {
+const statusKey: Record<ProjectStatus, string> = {
+  latest: "latest",
   completed: "completed",
   "in-progress": "inProgress",
 };
 
+/** Shared typography — identical on every project card. */
+const CARD_TITLE_CLASS = "text-xl leading-snug tracking-tight";
+const CARD_DESCRIPTION_CLASS =
+  "line-clamp-3 font-normal leading-relaxed";
+const CARD_TAGS_CLASS = "flex min-h-[3.25rem] flex-wrap content-start gap-2";
+
 /**
  * Premium project card: hover lift, category + status badges, technology
- * badges and a "View Details" action that opens the reusable project modal.
+ * badges and minimalist footer actions via {@link ProjectCardFooter}.
  */
 export function ProjectCard({
   project,
@@ -40,7 +54,35 @@ export function ProjectCard({
   const t = useTranslations("projects");
   const tc = useTranslations("common");
   const [open, setOpen] = React.useState(false);
+
   const hasGithub = Boolean(project.github && project.github !== "#");
+  const hasLiveDemo = Boolean(project.liveDemo && project.liveDemo !== "#");
+  const showExternalLinks =
+    project.slug === "data-analysis-toolkit" && hasGithub && hasLiveDemo;
+  const isLatest = project.status === "latest";
+
+  const footerActions = showExternalLinks
+    ? [
+        {
+          label: t("repository"),
+          icon: Github,
+          href: project.github,
+          external: true,
+        },
+        {
+          label: t("liveDemo"),
+          icon: ExternalLink,
+          href: project.liveDemo,
+          external: true,
+        },
+      ]
+    : [
+        {
+          label: t("viewDetails"),
+          icon: ArrowUpRight,
+          onClick: () => setOpen(true),
+        },
+      ];
 
   return (
     <>
@@ -58,8 +100,9 @@ export function ProjectCard({
             {project.image ? (
               <Image
                 src={project.image}
-                alt={content.title}
+                alt={t("coverAlt", { project: content.title })}
                 fill
+                loading="lazy"
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -69,36 +112,60 @@ export function ProjectCard({
               </div>
             )}
 
+            {/* Subtle overlay keeps badges legible and the covers consistent */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-linear-to-t from-card/50 via-transparent to-background/25"
+            />
+
             {/* Overlay badges */}
             <Badge variant="secondary" className="absolute left-3 top-3 shadow-sm">
               {content.category}
             </Badge>
-            <Badge className="absolute right-3 top-3 gap-1 shadow-sm">
-              <Check className="size-3" />
+            <Badge
+              variant={isLatest ? "default" : "secondary"}
+              className="absolute right-3 top-3 gap-1 shadow-sm"
+            >
+              {isLatest ? (
+                <Sparkles className="size-3" />
+              ) : (
+                <Check className="size-3" />
+              )}
               {tc(`status.${statusKey[project.status]}`)}
             </Badge>
           </div>
 
           <CardHeader>
-            <CardTitle className="text-xl">{content.title}</CardTitle>
+            <CardTitle
+              className={cn(
+                CARD_TITLE_CLASS,
+                showExternalLinks &&
+                  "cursor-pointer transition-colors hover:text-primary",
+              )}
+              {...(showExternalLinks
+                ? {
+                    role: "button",
+                    tabIndex: 0,
+                    onClick: () => setOpen(true),
+                    onKeyDown: (e: React.KeyboardEvent) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        setOpen(true);
+                      }
+                    },
+                  }
+                : {})}
+            >
+              {content.title}
+            </CardTitle>
           </CardHeader>
 
-          <CardContent className="flex-1 space-y-4">
-            <p className="text-sm leading-relaxed text-muted-foreground">
+          <CardContent className="space-y-4">
+            <CardDescription className={CARD_DESCRIPTION_CLASS}>
               {content.description}
-            </p>
+            </CardDescription>
 
-            {content.impact ? (
-              <p className="flex items-start gap-2 rounded-lg border border-primary/20 bg-primary/5 p-3 text-sm font-medium text-foreground">
-                <TrendingUp
-                  className="mt-0.5 size-4 shrink-0 text-primary"
-                  aria-hidden
-                />
-                <span>{content.impact}</span>
-              </p>
-            ) : null}
-
-            <ul className="flex flex-wrap gap-2">
+            <ul className={CARD_TAGS_CLASS}>
               {project.technologies.map((tech) => (
                 <li key={tech}>
                   <Badge variant="outline">{tech}</Badge>
@@ -107,32 +174,9 @@ export function ProjectCard({
             </ul>
           </CardContent>
 
-          <CardFooter className="gap-3">
-            <Button className="flex-1" onClick={() => setOpen(true)}>
-              <ArrowUpRight />
-              {t("viewDetails")}
-            </Button>
-            {hasGithub ? (
-              <Button asChild variant="outline" size="icon" aria-label={t("github")}>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github />
-                </a>
-              </Button>
-            ) : (
-              <Button
-                variant="outline"
-                size="icon"
-                disabled
-                aria-label={t("github")}
-              >
-                <Github />
-              </Button>
-            )}
-          </CardFooter>
+          <div className="flex-1" aria-hidden />
+
+          <ProjectCardFooter actions={footerActions} />
         </Card>
       </motion.div>
 
@@ -140,8 +184,8 @@ export function ProjectCard({
         open={open}
         onClose={() => setOpen(false)}
         content={content}
-        technologies={project.technologies}
         github={project.github}
+        liveDemo={project.liveDemo}
         status={project.status}
       />
     </>

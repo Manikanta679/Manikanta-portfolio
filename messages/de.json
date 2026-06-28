@@ -30,7 +30,6 @@
     }
   },
   "about": {
-    "eyebrow": "Über mich",
     "title": "Über mich",
     "summary": {
       "title": "Berufliches Profil",
@@ -75,16 +74,15 @@
     }
   },
   "skills": {
-    "eyebrow": "Fähigkeiten",
     "title": "Fähigkeiten & Technologien",
-    "subtitle": "Ein Überblick über die Sprachen, Frameworks und Tools, mit denen ich arbeite – klicke auf eine Technologie, um zu sehen, wo ich sie eingesetzt habe.",
+    "subtitle": "Ein kuratierter Überblick über die Programmiersprachen, Frameworks, Plattformen und Engineering-Tools, die ich in KI, Full-Stack-Entwicklung, Data Analytics und Cloud-Anwendungen einsetze. Wähle eine Technologie, um zu sehen, wo sie angewendet wurde.",
     "categories": {
-      "programming": "Programmierung",
-      "frontend": "Frontend",
+      "programming": "Programmiersprachen",
+      "frontend": "Frontend-Entwicklung",
       "backend": "Backend & APIs",
-      "aiData": "KI / ML / Datenanalyse",
+      "aiData": "Künstliche Intelligenz & Daten",
       "databases": "Datenbanken & Cloud",
-      "tools": "DevOps & Tools"
+      "tools": "Entwicklertools & DevOps"
     },
     "modal": {
       "usedIn": "Wo ich es eingesetzt habe",
@@ -142,7 +140,7 @@
         "summary": "Modernes, responsives Styling und Layouts in meinen Webprojekten."
       },
       "dotnet": {
-        "summary": "Habe bei Biosoft Health Tech REST-APIs und Backend-Services mit SQL-Server-Anbindung entwickelt.",
+        "summary": "Habe bei Biosoft Health Tech REST-APIs und Backend-Services mit .NET Core Web API und SQL-Server-Anbindung entwickelt.",
         "responsibilities": [
           "REST-API-Entwicklung",
           "Backend-Services",
@@ -185,7 +183,7 @@
         "summary": "Klassische ML-Klassifikatoren für mein Spam-Erkennungssystem trainiert und evaluiert."
       },
       "dataanalytics": {
-        "summary": "Daten analysieren und interpretieren – gestützt durch mein Data-Analytics-Praktikumszertifikat und mein Big-Data-Studium."
+        "summary": "Daten analysieren und interpretieren – in meinem Data-Analysis-Toolkit-Projekt, durch mein Data-Analytics-Praktikumszertifikat und im Big-Data-Studium."
       },
       "sqlserver": {
         "summary": "Relationale Datenspeicherung für Backend-APIs bei Biosoft Health Tech entworfen und integriert."
@@ -199,6 +197,9 @@
       "postgresql": {
         "summary": "Relationale Datenbank für die Datenschicht dieses Portfolios über Supabase."
       },
+      "blynk": {
+        "summary": "Cloud-IoT-Plattform für Echtzeit-Alarme an Pflegepersonen in meinem Vital-Guard-Wearable-Sicherheitsprojekt."
+      },
       "git": {
         "summary": "Versionskontrolle in jedem Projekt und zur Zusammenarbeit während meiner Praktika.",
         "responsibilities": [
@@ -206,6 +207,9 @@
           "Branching-Workflows",
           "Zusammenarbeit im Praktikum"
         ]
+      },
+      "github": {
+        "summary": "Hosting, Zusammenarbeit und Code-Reviews für alle Projekt-Repositories – einschließlich Open-Source-Portfolio und Studienprojekte."
       },
       "docker": {
         "summary": "Anwendungen containerisiert und Workflows während meines DevOps-Praktikums bei Moka Software optimiert.",
@@ -232,202 +236,636 @@
           "Produktions-Monitoring"
         ],
         "outcome": "Build-, Test- und Deployment-Schritte für schnellere Releases automatisiert."
+      },
+      "swagger": {
+        "summary": "REST-API-Endpunkte während der Backend-Entwicklung bei Biosoft Health Tech dokumentiert und getestet."
+      },
+      "transferlearning": {
+        "summary": "Vortrainierte CNN-Modelle mit Fine-Tuning für die Anomalieerkennung auf Frame-Ebene in meinem Video-Anomalieerkennungsprojekt eingesetzt.",
+        "outcome": "Starke Erkennungsleistung auch mit begrenzten Trainingsdaten erreicht."
       }
     }
   },
   "education": {
-    "eyebrow": "Ausbildung",
     "title": "Ausbildung",
     "items": {
       "msc": {
         "degree": "M.Sc. Informatik (Big Data & Künstliche Intelligenz)",
         "institution": "SRH University Leipzig",
-        "location": "Deutschland",
-        "period": "Heute",
+        "location": "Leipzig, Deutschland",
+        "period": "April 2026 — Heute",
         "focus": [
           "Künstliche Intelligenz",
           "Big Data",
-          "Cloud Computing",
           "Maschinelles Lernen",
+          "Cloud Computing",
           "Skalierbare Systeme"
         ]
       },
       "bsc": {
         "degree": "B.Sc. Informatik",
-        "period": "2025",
+        "institution": "Global Academy of Technology",
+        "location": "Bengaluru, Indien",
+        "period": "Dezember 2021 — Juni 2025",
         "focus": [
           "Software Engineering",
           "Datenstrukturen",
           "Algorithmen",
-          "Datenbanken",
+          "Datenbanksysteme",
           "Webtechnologien"
         ]
       }
     }
   },
   "experience": {
-    "eyebrow": "Erfahrung",
-    "title": "Erfahrung",
+    "title": "Berufserfahrung",
+    "labels": {
+      "technologies": "Technologien",
+      "responsibilities": "Aufgaben",
+      "contributions": "Wichtige Beiträge",
+      "projects": "Projekte"
+    },
     "items": {
       "moka": {
         "role": "DevOps-Praktikant",
-        "company": "Moka Software Private Limited",
-        "period": "Nov 2025 – Feb 2026",
-        "highlights": [
-          "CI/CD-Workflows",
-          "Deployment-Unterstützung",
-          "API-Integration",
-          "Produktions-Monitoring",
-          "Agile Zusammenarbeit",
-          "Cloud-Technologien"
+        "company": "Moka Softwares Private Limited",
+        "location": "Ballari, Karnataka, Indien",
+        "period": "November 2025 — Januar 2026",
+        "technologies": [
+          "React",
+          "CI/CD",
+          "Git",
+          "Docker",
+          "Linux",
+          "REST-APIs",
+          "Umgebungskonfiguration",
+          "Deployment-Automatisierung",
+          "Authentifizierung",
+          "Monitoring"
+        ],
+        "responsibilities": [
+          "Mitwirkung beim Aufbau und der Pflege von CI/CD-Pipelines.",
+          "Unterstützung von Deployment-Workflows in Entwicklungs- und Produktionsumgebungen.",
+          "Konfiguration von Umgebungen und Build-Pipelines.",
+          "Integration von Frontend-Modulen mit Backend-REST-APIs.",
+          "Überwachung von Anwendungslogs und Deployments.",
+          "Pflege der Deployment-Dokumentation.",
+          "Zusammenarbeit in einem agilen Entwicklungsprozess."
+        ],
+        "contributions": [
+          "Mitarbeit an den Deployments von HarvestHub und der Kiosk-Anwendung.",
+          "Entwicklung wiederverwendbarer React-UI-Module für interne Anwendungen.",
+          "Implementierung geschützter Routen und tokenbasierter Authentifizierung.",
+          "Test von Authentifizierungs- und Autorisierungsabläufen.",
+          "Debugging von API-Konnektivität und CORS-Problemen."
+        ],
+        "projects": [
+          "DocChoice Healthcare",
+          "HarvestHub",
+          "Kiosk-Anwendung",
+          "HR-Management-System"
         ]
       },
       "biosoft": {
-        "role": "Engineering-Praktikant",
-        "company": "Biosoft Health Tech Private Limited",
-        "period": "Okt 2024 – Dez 2024",
-        "highlights": [
-          "React.js-Entwicklung",
-          ".NET-Core-APIs",
+        "role": "Engineering-Praktikant — Full-Stack-Entwicklung",
+        "company": "Biosoft Health Tech Pvt. Ltd.",
+        "location": "Bengaluru, Karnataka, Indien",
+        "period": "Oktober 2024 — Januar 2025",
+        "technologies": [
+          "React.js",
+          ".NET Core Web API",
           "SQL Server",
-          "Frontend-Backend-Integration",
-          "Authentifizierungs-APIs",
-          "Testen und Debugging"
+          "REST-APIs",
+          "Git"
+        ],
+        "responsibilities": [
+          "Entwicklung responsiver Frontend-Komponenten mit React.js.",
+          "Entwicklung von Backend-APIs mit .NET Core Web API.",
+          "Arbeit mit der SQL-Server-Datenbankverwaltung.",
+          "Mitwirkung im gesamten Softwareentwicklungszyklus.",
+          "Sicherung der Codequalität über Module hinweg."
+        ],
+        "contributions": [
+          "REST-API-Integration zwischen Frontend und Backend.",
+          "Unterstützung bei der Implementierung der Authentifizierung.",
+          "Testen und Debuggen von Softwaremodulen.",
+          "Erstellung technischer Dokumentation.",
+          "Enge Zusammenarbeit mit erfahrenen Entwicklern."
         ]
       }
     }
   },
   "projects": {
-    "eyebrow": "Projekte",
-    "title": "Ausgewählte Projekte",
-    "subtitle": "Projekte, die Fähigkeiten in KI, maschinellem Lernen, Full-Stack-Entwicklung und Engineering zeigen.",
+    "title": "Projekte",
+    "subtitle": "Ausgewählte Engineering-Fallstudien aus Full-Stack, KI, Computer Vision, maschinellem Lernen und IoT.",
     "viewDetails": "Details ansehen",
-    "github": "GitHub",
+    "repository": "Repository",
+    "github": "GitHub-Repository",
+    "liveDemo": "Live-Demo",
+    "liveApplication": "Live-Anwendung",
+    "coverAlt": "{project} – Projekt-Cover-Illustration",
     "empty": {
       "title": "Projekte folgen in Kürze",
       "description": "Neue Arbeiten sind in Vorbereitung und werden hier bald vorgestellt."
     },
     "modal": {
-      "overview": "Überblick",
-      "problem": "Problem",
-      "solution": "Lösung",
-      "technologies": "Technologien",
-      "achievements": "Wichtigste Erfolge",
-      "architecture": "Architektur",
-      "challenges": "Herausforderungen",
-      "futureImprovements": "Zukünftige Verbesserungen",
+      "features": "Hauptfunktionen",
+      "architecture": "Architektur & Systemdesign",
+      "stack": "Technologie-Stack",
+      "modules": "Kernmodule",
+      "contributions": "Wichtige Beiträge",
+      "challenges": "Gelöste Herausforderungen",
+      "outcomes": "Ergebnisse",
       "close": "Schließen"
     },
     "items": {
-      "vital-guard": {
-        "title": "Vital Guard – IoT-Sicherheitssystem",
-        "description": "IoT-basiertes tragbares Sturzerkennungssystem mit ESP8266, MPU6050, GPS und Blynk.",
-        "category": "IoT & Embedded",
-        "impact": "Ermöglicht sofortige, standortbasierte Sturzalarme, damit Hilfe gefährdete Nutzer schneller erreicht.",
-        "overview": "Ein tragbares Sicherheitsgerät, das Stürze automatisch erkennt und Pflegepersonen in Echtzeit mit dem aktuellen Standort des Trägers alarmiert.",
-        "problem": "Ältere und gefährdete Personen, die allein stürzen, können oft keine Hilfe rufen, wodurch aus einem beherrschbaren Vorfall ein medizinischer Notfall wird.",
-        "solution": "Ein ESP8266-basiertes Wearable liest kontinuierlich Bewegungsdaten eines MPU6050-Sensors, erkennt Sturzmuster, erfasst GPS-Koordinaten und sendet über die Blynk-Plattform sofortige Alarme an Pflegepersonen.",
-        "achievements": [
-          "Echtzeit-Sturzerkennung über Bewegungsmuster-Schwellenwerte",
-          "Sofortige Alarme an Pflegepersonen mit Live-GPS-Standort",
-          "Energiesparendes Wearable-Design für den ganztägigen Einsatz"
+      "data-analysis-toolkit": {
+        "title": "Data Analysis Toolkit",
+        "subtitle": "Full-Stack-Analyseplattform mit KI-Unterstützung für interaktive Datenexploration",
+        "description": "Ein modulares Full-Stack-Toolkit für statistische Analyse, Datenvisualisierung und KI-gestützte Erkenntnisse über interaktive Dashboards.",
+        "category": "Full Stack • KI • Datenanalyse",
+        "overview": "Data Analysis Toolkit ist mein neuestes Flaggschiff-Projekt – eine moderne Full-Stack-Plattform, die Rohdaten in interaktive Erkenntnisse verwandelt. Sie vereint ein responsives Analyse-Dashboard, statistische Analyse und KI-gestützte Exploration in einer modularen, skalierbaren Architektur.",
+        "features": [
+          "Interaktive Dashboards mit dynamischen, responsiven Diagrammen",
+          "Statistische Analyse: deskriptive Statistik, Korrelationen und Verteilungen",
+          "KI-gestützte Analysen für automatische Erkenntnisse und Zusammenfassungen",
+          "Flexibler Datenimport und Vorverarbeitung",
+          "Wiederverwendbare, modulare Analysekomponenten",
+          "Skalierbares Design für wachsende Datenmengen"
         ],
-        "architecture": "Eine Sensorschicht (MPU6050 + GPS) versorgt den ESP8266-Mikrocontroller, der die Erkennungslogik ausführt und über WLAN mit der Blynk-Cloud für Benachrichtigungen und Dashboards kommuniziert.",
+        "architecture": [
+          {
+            "name": "Frontend",
+            "description": "Ein React- und Next.js-Dashboard mit TypeScript und Tailwind CSS für eine responsive, typsichere Oberfläche."
+          },
+          {
+            "name": "Backend / API",
+            "description": "Eine REST-API-Schicht (Node.js / Express), die die Datenverarbeitung orchestriert und Analyseergebnisse an das Frontend liefert."
+          },
+          {
+            "name": "Analyse-Engine",
+            "description": "Python-basierte statistische und Machine-Learning-Routinen für Berechnungen und KI-gestützte Erkenntnisse."
+          },
+          {
+            "name": "Modulares Design",
+            "description": "Entkoppelte Module für Ingestion, Verarbeitung, Visualisierung und Erkenntnisgewinnung halten das System skalierbar und wartbar."
+          }
+        ],
+        "stack": [
+          {
+            "label": "Frontend",
+            "items": ["Next.js", "React.js", "TypeScript", "Tailwind CSS"]
+          },
+          {
+            "label": "Backend",
+            "items": ["Node.js", "Express.js", "REST-APIs"]
+          },
+          {
+            "label": "Analyse & KI",
+            "items": ["Python", "Maschinelles Lernen", "Scikit-learn", "Datenanalyse"]
+          },
+          {
+            "label": "Tools",
+            "items": ["Git", "VS Code"]
+          }
+        ],
+        "modules": [
+          {
+            "name": "Datenimport",
+            "description": "Importiert und validiert Datensätze und bereitet sie für die Analyse vor."
+          },
+          {
+            "name": "Statistische Analyse",
+            "description": "Berechnet deskriptive Statistik, Korrelationen und Verteilungen."
+          },
+          {
+            "name": "Visualisierungs-Engine",
+            "description": "Rendert interaktive, responsive Diagramme und Dashboards."
+          },
+          {
+            "name": "KI-Erkenntnisse",
+            "description": "Erstellt automatische Zusammenfassungen und KI-gestützte Beobachtungen."
+          },
+          {
+            "name": "API-Schicht",
+            "description": "Verbindet das Frontend-Dashboard über REST-Endpunkte mit der Backend-Verarbeitung."
+          }
+        ],
+        "contributions": [
+          "Entwurf einer modularen, skalierbaren Full-Stack-Architektur.",
+          "Entwicklung eines interaktiven Analyse-Dashboards mit wiederverwendbaren Komponenten.",
+          "Implementierung von Funktionen für statistische Analyse und Datenvisualisierung.",
+          "Integration KI-gestützter Analysen in den Explorations-Workflow.",
+          "Aufbau einer sauberen REST-API-Schicht zwischen Frontend und Verarbeitungslogik.",
+          "Optimierung der Oberfläche hinsichtlich Responsivität und Performance."
+        ],
         "challenges": [
-          "Anpassung der Schwellenwerte zur Minimierung von Fehlalarmen",
-          "Aufrechterhaltung einer zuverlässigen Verbindung bei geringem Stromverbrauch"
+          "Entwurf einer modularen Struktur, die mit Datenmengen und Funktionen skaliert.",
+          "Darstellung komplexer statistischer Ergebnisse in einer klaren, interaktiven UI.",
+          "Erhaltung eines responsiven Analyse-Workflows bei größeren Datenmengen."
         ],
-        "futureImprovements": [
-          "On-Device-ML-Modell für intelligentere Sturzklassifizierung",
-          "Herzfrequenz- und SpO2-Überwachung",
-          "Begleitende mobile Anwendung"
+        "outcomes": [
+          "Ein Full-Stack-Flaggschiff-Toolkit, das End-to-End-Datenanalyse-Engineering zeigt.",
+          "Wiederverwendbare Analysemodule und Dashboards, anpassbar an neue Datensätze.",
+          "Eine skalierbare Grundlage für weitere KI-gestützte Funktionen."
+        ]
+      },
+      "vital-guard": {
+        "title": "Vital Guard – IoT-Sicherheitssystem für Senioren und Menschen mit Behinderung",
+        "subtitle": "Tragbares IoT-Gerät mit automatischer Sturzerkennung und Echtzeit-Alarmen an Pflegepersonen",
+        "description": "Ein tragbares IoT-Gerät, das Stürze mit ESP8266 und MPU6050 erkennt und über Blynk Echtzeit-Alarme mit GPS-Standort an Pflegepersonen sendet.",
+        "category": "IoT • Embedded Systems • Healthcare",
+        "overview": "Vital Guard ist ein tragbares IoT-Sicherheitssystem, das Senioren und Menschen mit Behinderung schützt, indem es Stürze automatisch erkennt und Pflegepersonen in Echtzeit mit dem aktuellen Standort des Trägers benachrichtigt.",
+        "features": [
+          "Automatische Sturzerkennung über schwellenwertbasierte Bewegungsanalyse",
+          "Echtzeit-Benachrichtigungen an Pflegepersonen über die Blynk-IoT-Plattform",
+          "Live-GPS-Standortverfolgung des Trägers",
+          "Notfallalarme bei erkannten Stürzen",
+          "Fehlalarm-Abbruch zur Reduzierung unnötiger Alarme",
+          "Krankenhaussuche für nahe medizinische Hilfe"
+        ],
+        "architecture": [
+          {
+            "name": "Sensorschicht",
+            "description": "Ein MPU6050-Beschleunigungs-/Gyrosensor erfasst Bewegungsdaten, während ein GPS-Modul den aktuellen Standort liefert."
+          },
+          {
+            "name": "Mikrocontroller (ESP8266)",
+            "description": "Liest Sensordaten, führt den Sturzerkennungs-Algorithmus aus und steuert die WLAN-Kommunikation."
+          },
+          {
+            "name": "Sturzerkennungslogik",
+            "description": "Schwellenwertbasierte Bewegungserkennung identifiziert plötzliche Stöße und abnormale Bewegungsmuster."
+          },
+          {
+            "name": "Cloud-/IoT-Schicht (Blynk)",
+            "description": "Empfängt Ereignisse über WLAN und liefert Echtzeit-Alarme und Dashboards an Pflegepersonen."
+          },
+          {
+            "name": "Benachrichtigungsschicht",
+            "description": "Sendet Notfallalarme zusammen mit dem GPS-Standort an das Gerät der Pflegeperson."
+          }
+        ],
+        "stack": [
+          {
+            "label": "Hardware",
+            "items": ["ESP8266", "MPU6050", "GPS-Modul"]
+          },
+          {
+            "label": "IoT-Plattform",
+            "items": ["Blynk IoT"]
+          },
+          {
+            "label": "Konnektivität",
+            "items": ["WLAN", "Cloud-Kommunikation"]
+          },
+          {
+            "label": "Konzepte",
+            "items": ["Embedded Systems", "Schwellenwertbasierte Erkennung", "Echtzeit-Alarme"]
+          }
+        ],
+        "modules": [
+          {
+            "name": "Sturzerkennungsmodul",
+            "description": "Analysiert MPU6050-Bewegungsdaten anhand von Schwellenwerten zur Sturzerkennung."
+          },
+          {
+            "name": "GPS-Tracking",
+            "description": "Erfasst kontinuierlich den Standort des Trägers für die Notfallreaktion."
+          },
+          {
+            "name": "Alarmsystem",
+            "description": "Löst Notfallbenachrichtigungen aus und sendet sie in Echtzeit an Pflegepersonen."
+          },
+          {
+            "name": "Fehlalarm-Abbruch",
+            "description": "Ermöglicht das Abbrechen versehentlicher Auslösungen, um Fehlalarme zu vermeiden."
+          },
+          {
+            "name": "Cloud-Kommunikation",
+            "description": "Überträgt Ereignisse über WLAN an die Blynk-Plattform."
+          },
+          {
+            "name": "Krankenhaussuche",
+            "description": "Hilft, nahe gelegene Krankenhäuser für schnellere Hilfe zu finden."
+          }
+        ],
+        "contributions": [
+          "Entwurf der durchgängigen IoT-Architektur über Hardware und Cloud hinweg.",
+          "Implementierung eines schwellenwertbasierten Sturzerkennungs-Algorithmus auf dem ESP8266.",
+          "Integration der MPU6050-Bewegungserfassung mit GPS-Standortverfolgung.",
+          "Entwicklung von Echtzeit-Alarmen an Pflegepersonen über die Blynk-Plattform.",
+          "Hinzufügen eines Fehlalarm-Abbruchmechanismus zur Verbesserung der Zuverlässigkeit.",
+          "Test des Geräts in simulierten Sturz- und Bewegungsszenarien."
+        ],
+        "challenges": [
+          "Anpassung der Bewegungsschwellenwerte für zuverlässige Sturzerkennung bei minimalen Fehlalarmen.",
+          "Aufrechterhaltung stabiler WLAN-Verbindung und Cloud-Kommunikation auf einem energiesparenden Gerät.",
+          "Koordination von Sensorwerten, GPS und Alarmen in Echtzeit."
+        ],
+        "outcomes": [
+          "Ein funktionierender Wearable-Prototyp, der Stürze erkennt und Pflegepersonen mit Live-Standort alarmiert.",
+          "Reduzierte Fehlalarme durch Schwellenwertanpassung und einen Abbruchmechanismus.",
+          "Abgeschlossen als meine Abschlussarbeit und Beleg für durchgängiges IoT-Engineering."
         ]
       },
       "video-anomaly-detection": {
-        "title": "Video-Anomalieerkennungssystem",
-        "description": "KI-gestützte Überwachungs-Anomalieerkennung mit Transfer Learning und Deep-Learning-Techniken.",
-        "category": "Computer Vision",
-        "impact": "Reduziert den manuellen Überwachungsaufwand durch automatische Anomalieerkennung auf Frame-Ebene.",
-        "overview": "Ein KI-Überwachungssystem, das ungewöhnliche oder verdächtige Aktivitäten in Videostreams automatisch markiert.",
-        "problem": "Die manuelle Überwachung von Aufnahmen ist mühsam und fehleranfällig, sodass kritische Anomalien häufig übersehen werden.",
-        "solution": "Mithilfe von Transfer Learning auf neuronalen Faltungsnetzen lernt das System normale Muster aus Videobildern (verarbeitet mit OpenCV) und markiert Abweichungen als Anomalien.",
-        "achievements": [
-          "Transfer Learning zur Reduzierung des Trainingsdatenbedarfs",
-          "Anomalie-Bewertung auf Frame-Ebene bei Live-Video",
-          "Deutlich geringerer manueller Überwachungsaufwand"
+        "title": "Video-Anomalieerkennung mit Transfer Learning & Fine-Tuning",
+        "subtitle": "Deep-Learning-System zur Anomalieerkennung auf Frame-Ebene in Überwachungsvideos",
+        "description": "Ein Computer-Vision-System, das Anomalien in Überwachungsaufnahmen mit CNNs, Transfer Learning und Fine-Tuning über Benchmark-Datensätze erkennt.",
+        "category": "Künstliche Intelligenz • Computer Vision",
+        "overview": "Dieses Projekt erkennt abnormale Ereignisse in Überwachungsvideos auf Frame-Ebene mithilfe neuronaler Faltungsnetze und wendet Transfer Learning und Fine-Tuning an, um auch mit begrenzten Trainingsdaten starke Ergebnisse zu erzielen.",
+        "features": [
+          "Anomalieerkennung auf Frame-Ebene in Videostreams",
+          "Transfer Learning aus vortrainierten CNN-Modellen",
+          "Fine-Tuning zur Anpassung der Modelle an Überwachungsdaten",
+          "Evaluierung über mehrere Benchmark-Datensätze",
+          "OpenCV-basierte Bildextraktion und Vorverarbeitung",
+          "Leistungsvergleich zwischen Modellkonfigurationen"
         ],
-        "architecture": "OpenCV übernimmt die Bildextraktion und Vorverarbeitung; ein mit TensorFlow erstelltes CNN führt Merkmalsextraktion und Anomalie-Bewertung durch, deren Ergebnisse zur Überprüfung bereitgestellt werden.",
+        "architecture": [
+          {
+            "name": "Datenvorverarbeitung",
+            "description": "OpenCV extrahiert und normalisiert Videobilder aus jedem Datensatz für die Modelleingabe."
+          },
+          {
+            "name": "Merkmalsextraktion (CNN)",
+            "description": "Vortrainierte Faltungsnetze extrahieren räumliche Merkmale aus Videobildern."
+          },
+          {
+            "name": "Transfer Learning",
+            "description": "Vortrainierte Gewichte beschleunigen das Lernen, sodass das Modell mit begrenzten Daten gut funktioniert."
+          },
+          {
+            "name": "Fine-Tuning",
+            "description": "Ausgewählte Schichten werden neu trainiert, um das Modell auf die Anomalieerkennung zu spezialisieren."
+          },
+          {
+            "name": "Evaluierung",
+            "description": "Vorhersagen auf Frame-Ebene werden bewertet und mit Standardmetriken verglichen."
+          }
+        ],
+        "stack": [
+          {
+            "label": "Sprachen",
+            "items": ["Python"]
+          },
+          {
+            "label": "Deep Learning",
+            "items": ["TensorFlow", "Keras", "CNN", "Transfer Learning", "Fine-Tuning"]
+          },
+          {
+            "label": "Computer Vision",
+            "items": ["OpenCV"]
+          },
+          {
+            "label": "Datensätze",
+            "items": ["UCSD Ped1", "UCSD Ped2", "CUHK Avenue"]
+          }
+        ],
+        "modules": [
+          {
+            "name": "Datensatz-Vorverarbeitung",
+            "description": "Lädt und bereitet UCSD-Ped1/Ped2- und CUHK-Avenue-Bilder mit OpenCV vor."
+          },
+          {
+            "name": "Transfer-Learning-Pipeline",
+            "description": "Initialisiert Modelle aus vortrainierten CNN-Gewichten."
+          },
+          {
+            "name": "Fine-Tuning-Phase",
+            "description": "Trainiert ausgewählte Schichten neu, um das Modell an die Anomalieerkennung anzupassen."
+          },
+          {
+            "name": "Trainings-Pipeline",
+            "description": "Verwaltet Modelltraining, Validierung und Checkpointing."
+          },
+          {
+            "name": "Evaluierung & Metriken",
+            "description": "Berechnet Metriken auf Frame-Ebene und vergleicht die Modellleistung."
+          }
+        ],
+        "contributions": [
+          "Entwurf einer Transfer-Learning-Pipeline für die Video-Anomalieerkennung.",
+          "Implementierung der Bildextraktion und Vorverarbeitung mit OpenCV.",
+          "Fine-Tuning von CNN-Modellen auf UCSD Ped1, Ped2 und CUHK Avenue.",
+          "Evaluierung der Modelle anhand von Anomaliemetriken auf Frame-Ebene.",
+          "Vergleich der Leistung über Datensätze und Modellkonfigurationen hinweg.",
+          "Optimierung des Trainings für den effektiven Einsatz mit begrenzten gelabelten Daten."
+        ],
         "challenges": [
-          "Umgang mit unterschiedlichen Licht- und Kamerabedingungen",
-          "Abwägung zwischen Erkennungsempfindlichkeit und Fehlalarmen"
+          "Umgang mit unterschiedlichen Licht-, Personendichte- und Kamerabedingungen über Datensätze hinweg.",
+          "Abwägung zwischen Erkennungsempfindlichkeit und Fehlalarmen.",
+          "Erreichen hoher Genauigkeit mit begrenzten gelabelten Anomaliedaten."
         ],
-        "futureImprovements": [
-          "Temporale Modelle (LSTM / 3D-CNN) für Bewegungskontext",
-          "Echtzeit-Bereitstellung auf Edge-Geräten",
-          "Alarmierungs- und Analyse-Dashboard"
+        "outcomes": [
+          "Anomalieerkennung auf Frame-Ebene über drei Benchmark-Datensätze.",
+          "Nachweis, dass Transfer Learning und Fine-Tuning die Ergebnisse bei begrenzten Daten verbessern.",
+          "Ein dokumentierter Vergleich der Modellleistung über Datensätze hinweg."
         ]
       },
       "sms-spam-detection": {
         "title": "SMS-Spam-Erkennungssystem",
-        "description": "NLP-basiertes maschinelles Lernsystem zur Klassifizierung von Spam- und legitimen Nachrichten.",
-        "category": "NLP & Maschinelles Lernen",
-        "impact": "Liefert hochpräzise Spam-Filterung mit einer leichtgewichtigen, schnellen NLP-Pipeline.",
-        "overview": "Ein maschinelles Lernsystem, das Textnachrichten als Spam oder legitim (Ham) klassifiziert.",
-        "problem": "Spam-Nachrichten überladen Postfächer und setzen Nutzer Phishing und Betrug aus.",
-        "solution": "Nachrichten werden mit NLTK bereinigt und tokenisiert, in numerische Merkmale umgewandelt und mit scikit-learn-Modellen klassifiziert, die auf gelabelten SMS-Daten trainiert wurden.",
-        "achievements": [
-          "Hochpräzise Spam-/Ham-Klassifizierung",
-          "Durchgängige NLP-Vorverarbeitungs-Pipeline",
+        "subtitle": "NLP- und Machine-Learning-Pipeline zur Klassifizierung von SMS als Spam oder Ham",
+        "description": "Ein maschinelles Lernsystem, das SMS-Nachrichten mit TF-IDF-Merkmalen und trainierten Klassifikatoren als Spam oder legitim einstuft.",
+        "category": "Maschinelles Lernen • NLP",
+        "overview": "Eine durchgängige NLP-Pipeline, die SMS-Text bereinigt und vektorisiert und anschließend jede Nachricht mithilfe von Machine-Learning-Modellen als Spam oder legitim klassifiziert.",
+        "features": [
+          "Textbereinigung und Vorverarbeitung von SMS-Rohdaten",
+          "TF-IDF-Merkmalsextraktion aus dem Nachrichtentext",
+          "Machine-Learning-basierte Spam-/Ham-Klassifizierung",
+          "Durchgängige Vorhersage-Pipeline",
+          "Modellevaluierung auf gelabelten Daten",
           "Leichtgewichtige, schnelle Inferenz"
         ],
-        "architecture": "Textvorverarbeitung (NLTK) → Merkmalsextraktion (TF-IDF) → scikit-learn-Klassifikator → Vorhersage, eingebettet in eine wiederverwendbare Pipeline.",
-        "challenges": [
-          "Umgang mit unausgewogenen Spam-/Ham-Klassen",
-          "Vermeidung von Overfitting bei kurzen, verrauschten Texten"
+        "architecture": [
+          {
+            "name": "Datenvorverarbeitung",
+            "description": "Bereinigt SMS-Rohtext durch Kleinschreibung, Rauschentfernung und Tokenisierung."
+          },
+          {
+            "name": "Merkmalsextraktion",
+            "description": "Wandelt bereinigten Text mithilfe von TF-IDF in numerische Vektoren um."
+          },
+          {
+            "name": "Modelltraining",
+            "description": "Trainiert scikit-learn-Klassifikatoren auf gelabelten Spam-/Ham-Daten."
+          },
+          {
+            "name": "Vorhersage-Pipeline",
+            "description": "Wendet Vorverarbeitung und das trainierte Modell zur Klassifizierung neuer Nachrichten an."
+          },
+          {
+            "name": "Evaluierung",
+            "description": "Misst die Leistung mit Standard-Klassifikationsmetriken."
+          }
         ],
-        "futureImprovements": [
-          "Transformer-basierte Modelle für höhere Genauigkeit",
-          "Mehrsprachige Unterstützung",
-          "Bereitstellung als gehostete API"
+        "stack": [
+          {
+            "label": "Sprachen",
+            "items": ["Python"]
+          },
+          {
+            "label": "Maschinelles Lernen",
+            "items": ["Scikit-learn", "Maschinelles Lernen"]
+          },
+          {
+            "label": "NLP",
+            "items": ["NLTK", "TF-IDF", "NLP"]
+          }
+        ],
+        "modules": [
+          {
+            "name": "Textbereinigung",
+            "description": "Normalisiert SMS-Nachrichten und entfernt Rauschen."
+          },
+          {
+            "name": "Feature Engineering",
+            "description": "Erstellt TF-IDF-Merkmalsvektoren aus dem bereinigten Text."
+          },
+          {
+            "name": "Klassifikationsmodell",
+            "description": "Trainiert und wendet den Spam-/Ham-Klassifikator an."
+          },
+          {
+            "name": "Vorhersage-Pipeline",
+            "description": "Fasst Vorverarbeitung und Inferenz zu einem wiederverwendbaren Ablauf zusammen."
+          },
+          {
+            "name": "Modellevaluierung",
+            "description": "Bewertet Genauigkeit und weitere Klassifikationsmetriken."
+          }
+        ],
+        "contributions": [
+          "Entwurf einer durchgängigen NLP-Klassifikations-Pipeline.",
+          "Implementierung von Routinen zur Textbereinigung und Vorverarbeitung.",
+          "Entwicklung von TF-IDF-Merkmalen aus SMS-Text.",
+          "Training und Evaluierung von Machine-Learning-Klassifikatoren.",
+          "Aufbau einer wiederverwendbaren Vorhersage-Pipeline für neue Nachrichten."
+        ],
+        "challenges": [
+          "Umgang mit unausgewogenen Spam- und Ham-Klassen.",
+          "Vermeidung von Overfitting bei kurzen, verrauschten Textnachrichten.",
+          "Bereinigung inkonsistenter, realer SMS-Texte."
+        ],
+        "outcomes": [
+          "Genaue Spam-/Ham-Klassifizierung auf gelabelten SMS-Daten.",
+          "Eine wiederverwendbare, leichtgewichtige NLP-Pipeline für schnelle Inferenz.",
+          "Eine klare Grundlage für die zukünftige Bereitstellung als API."
         ]
       }
     }
   },
   "certifications": {
-    "eyebrow": "Zertifikate",
     "title": "Zertifikate",
+    "viewCertificate": "Zertifikat ansehen",
+    "showMore": "Mehr anzeigen",
+    "showLess": "Weniger anzeigen",
+    "additionalTitle": "Weitere Auszeichnungen",
     "empty": {
       "title": "Zertifikate folgen in Kürze",
       "description": "Neu erworbene Zertifikate erscheinen hier, sobald sie abgeschlossen sind."
     },
     "items": {
-      "aws": {
-        "title": "AWS Cloud Practitioner Training"
+      "fullStackInternship": {
+        "title": "Full-Stack-Entwicklung — Praktikum",
+        "issuer": "Biosoft Health Tech Pvt. Ltd.",
+        "year": "2025"
       },
-      "dataAnalytics": {
-        "title": "Data Analytics Internship Certification"
+      "devOpsInternship": {
+        "title": "DevOps-Entwicklung — Praktikum",
+        "issuer": "Moka Softwares Pvt. Ltd.",
+        "year": "2026"
       },
-      "aiTools": {
-        "title": "AI Tools Workshop Certification"
+      "dataAnalyticsInternship": {
+        "title": "Data Analytics — Praktikum",
+        "issuer": "Technohacks",
+        "year": "2024"
+      },
+      "awsCloudPractitioner": {
+        "title": "AWS Certified Cloud Practitioner (CLF-C02)",
+        "issuer": "Amazon Web Services",
+        "year": "2025"
+      },
+      "linuxProgramming": {
+        "title": "TechA Linux Programming Foundation",
+        "issuer": "Infosys Springboard",
+        "year": "2024"
+      },
+      "matlabOnramp": {
+        "title": "MATLAB Onramp",
+        "issuer": "MathWorks",
+        "year": "2024"
+      },
+      "aiToolsWorkshop": {
+        "title": "AI Tools Workshop",
+        "issuer": "Berufliches Weiterbildungsprogramm",
+        "year": "2024"
+      },
+      "researchPublication": {
+        "title": "Forschungspublikation — Zertifikat",
+        "issuer": "Akademische Konferenz / Fachzeitschrift",
+        "year": "2025"
+      },
+      "digitalMarketing": {
+        "title": "Introduction to Digital Marketing",
+        "issuer": "Great Learning",
+        "year": "2024"
+      },
+      "techTriathlon": {
+        "title": "Tech Triathlon — Teilnahme",
+        "issuer": "Technischer Veranstalter",
+        "year": "2024"
+      },
+      "talentEaseTraining": {
+        "title": "TalentEase Progressive Training",
+        "issuer": "TalentEase",
+        "year": "2024"
+      },
+      "vidvathAppreciation": {
+        "title": "Vidvath India Foundation — Anerkennungszertifikat",
+        "issuer": "Vidvath India Foundation",
+        "year": "2024"
       }
     }
   },
   "resume": {
-    "eyebrow": "Lebenslauf",
     "title": "Lebenslauf",
     "description": "Möchten Sie einen vollständigen Überblick über meine Erfahrung, Ausbildung und Projekte? Laden Sie meinen Lebenslauf als PDF herunter.",
     "download": "Lebenslauf herunterladen"
   },
   "contact": {
-    "eyebrow": "Kontakt",
     "title": "Kontakt",
     "cta": "Lassen Sie uns gemeinsam etwas Großartiges schaffen",
     "subtitle": "Lassen Sie uns vernetzen und gemeinsam etwas Bedeutsames schaffen.",
     "locationLabel": "Standort",
     "emailLabel": "E-Mail",
+    "phoneLabel": "Telefon (Deutschland)",
+    "whatsappLabel": "WhatsApp",
     "emailMe": "E-Mail senden",
     "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "whatsapp": "WhatsApp",
+    "form": {
+      "title": "Nachricht senden",
+      "nameLabel": "Name",
+      "namePlaceholder": "Ihr Name",
+      "emailLabel": "E-Mail",
+      "emailPlaceholder": "ihre@email.de",
+      "messageLabel": "Nachricht",
+      "messagePlaceholder": "Wie kann ich Ihnen helfen?",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+      "errorConfig": "EmailJS ist noch nicht konfiguriert. Bitte fügen Sie Ihre EmailJS-Zugangsdaten in .env.local ein.",
+      "validation": {
+        "nameRequired": "Name ist erforderlich",
+        "emailRequired": "E-Mail ist erforderlich",
+        "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "messageRequired": "Nachricht ist erforderlich"
+      }
+    }
   },
   "footer": {
     "headline": "AI Engineer | Full-Stack-Entwickler | Data-Science-Enthusiast",
@@ -446,6 +884,8 @@
     "status": {
       "current": "Aktuell",
       "completed": "Abgeschlossen",
+      "graduated": "Abgeschlossen",
+      "latest": "Neuestes Projekt",
       "inProgress": "In Bearbeitung"
     }
   },
