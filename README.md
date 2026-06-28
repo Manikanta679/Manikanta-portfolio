@@ -1,56 +1,62 @@
-# Manikanta Engalligi — Personal Portfolio
-
 <div align="center">
 
-# AI Engineer | Full-Stack Developer | Data Analytics Enthusiast
+# Manikanta Engalligi Portfolio
 
-A modern, multilingual, production-ready portfolio showcasing my professional journey, technical expertise, academic projects, certifications, and experience. Built using the latest web technologies with a strong focus on performance, accessibility, scalability, and clean UI/UX.
+### AI Engineer • Full-Stack Developer • Data Analytics
 
+A modern, responsive, multilingual personal portfolio built with **Next.js 15**, **TypeScript**, and **Tailwind CSS** showcasing my projects, technical skills, certifications, professional experience, and resume.
 
-### Live Website
+![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=nextdotjs)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC?logo=tailwindcss)
+![Vercel](https://img.shields.io/badge/Deployment-Vercel-black?logo=vercel)
 
-**[Visit My Portfolio](https://manikanta-portfolio-seven.vercel.app)**
+[![Live Website](https://img.shields.io/badge/🌐_Live_Website-Visit_Portfolio-black?style=for-the-badge)](https://manikanta-portfolio-seven.vercel.app)
 
+</div>
 ---
 
-## Portfolio Preview
+# Portfolio Preview
 
-![Portfolio Preview](public/images/portfolio-preview.png)
+<p align="center">
+  <img src="public/images/portfolio-preview.png" alt="Portfolio Preview" width="100%">
+</p>
+---
 
 # About the Project
 
-This portfolio was designed and developed to serve as a professional online presence where recruiters, hiring managers, collaborators, and fellow developers can learn more about me, explore my projects, review my technical skills, download my resume, and get in touch through an integrated contact form.
+This portfolio was designed and developed to serve as my professional online presence where recruiters, hiring managers, collaborators, and fellow developers can learn more about me, explore my projects, review my technical skills, download my resume, and contact me directly.
 
-The application follows modern software engineering practices and is built using the latest Next.js App Router architecture, TypeScript, Tailwind CSS, and various production-ready services.
+The application follows modern software engineering practices with a strong emphasis on performance, accessibility, responsive design, clean UI/UX, SEO optimization, scalability, and maintainable code.
 
-The website includes multilingual support, responsive layouts, dark/light themes, optimized image delivery, integrated EmailJS contact functionality, SEO enhancements, and deployment through Vercel.
+Visitors can also send messages directly through an integrated EmailJS contact form without requiring a custom backend server.
 
 ---
 
 # Features
 
 - Responsive design across desktop, tablet, and mobile devices
-- Modern UI built using Tailwind CSS v4
 - Built with Next.js 15 App Router
-- TypeScript strict mode
+- TypeScript with Strict Mode
+- Tailwind CSS v4
+- Modern UI using shadcn/ui
+- Interactive animations with Framer Motion
 - English & German language support
-- Dark / Light mode
-- Interactive animations using Framer Motion
+- Dark / Light theme
 - Professional Hero section
 - About section
 - Education timeline
 - Experience timeline
 - Project showcase
 - Technical Skills section
-- Certifications
+- Certifications section
 - Resume download
-- Integrated EmailJS contact form
+- EmailJS Contact Form
 - Cloudinary image optimization
-- Supabase integration
 - SEO optimized metadata
 - Dynamic Sitemap
 - Robots.txt generation
-- Progressive Web App support
+- Progressive Web App (PWA)
 - Production deployment using Vercel
 
 ---
@@ -58,317 +64,100 @@ The website includes multilingual support, responsive layouts, dark/light themes
 # Tech Stack
 
 | Category | Technology |
-|------------|------------|
+|-----------|------------|
 | Framework | Next.js 15 (App Router) |
 | Language | TypeScript |
 | Styling | Tailwind CSS v4 |
-| Components | shadcn/ui |
-| UI Primitives | Radix UI |
+| UI Components | shadcn/ui + Radix UI |
 | Animation | Framer Motion |
-| Localization | next-intl |
+| Internationalization | next-intl |
+| Backend Services | Supabase |
+| Image Optimization | Cloudinary |
+| Contact Form | EmailJS |
 | Theme | next-themes |
-| Database | Supabase |
-| Email Service | EmailJS |
-| Image Hosting | Cloudinary |
-| Icons | Lucide React |
 | Deployment | Vercel |
-| Package Manager | npm |
-
----
-
-# Why These Technologies?
-
-## Next.js 15
-
-Provides a production-ready React framework with App Router, Server Components, SEO optimization, routing, metadata generation, and high performance.
-
----
-
-## TypeScript
-
-Ensures strict type safety, maintainable code, improved developer experience, and scalable architecture.
-
----
-
-## Tailwind CSS
-
-Utility-first CSS framework used to build responsive and consistent interfaces rapidly.
-
----
-
-## Framer Motion
-
-Adds modern animations and smooth user interactions throughout the application.
-
----
-
-## next-intl
-
-Implements multilingual support for English and German while maintaining scalable localization.
-
----
-
-## EmailJS
-
-Allows visitors to contact me directly through the portfolio without requiring a backend server.
-
----
-
-## Supabase
-
-Used for scalable backend integration and future extensibility.
-
----
-
-## Cloudinary
-
-Optimizes image storage, delivery, and loading performance.
-
----
-
-## Vercel
-
-Provides continuous deployment, edge optimization, and production hosting.
 
 ---
 
 # Project Structure
 
-```
+```text
 Manikanta-Portfolio
 │
-├── app/
-│   ├── [locale]/
-│   ├── globals.css
-│   ├── sitemap.ts
-│   ├── robots.ts
-│   ├── manifest.ts
-│   └── layout.tsx
-│
-├── components/
-│   ├── ui/
-│   ├── language-switcher.tsx
-│   ├── theme-toggle.tsx
-│   └── reusable components
-│
-├── data/
-│   └── Portfolio data
-│
-├── hooks/
-│   └── Custom React hooks
-│
-├── i18n/
-│   └── Internationalization configuration
-│
+├── app/                     # Next.js App Router
+├── components/              # Reusable UI Components
+├── sections/                # Portfolio Sections
+├── data/                    # Portfolio Data
+├── hooks/                   # Custom React Hooks
+├── i18n/                    # Internationalization
 ├── lib/
-│   ├── cloudinary.ts
-│   ├── emailjs.ts
-│   ├── utils.ts
-│   └── supabase/
-│
-├── messages/
-│   ├── en.json
-│   └── de.json
-│
-├── providers/
-│   └── Theme & Localization providers
-│
+│   ├── supabase/            # Database Clients
+│   ├── emailjs.ts           # Contact Form Integration
+│   ├── cloudinary.ts        # Image Management
+│   └── utils.ts             # Utility Functions
+├── messages/                # Translation Files
+├── providers/               # Theme Providers
 ├── public/
-│   ├── certificates/
 │   ├── images/
-│   │   ├── profile.jpg
-│   │   ├── portfolio-preview.png
-│   │   └── projects/
+│   ├── certificates/
 │   └── resume/
-│
-├── sections/
-│   ├── Hero
-│   ├── About
-│   ├── Education
-│   ├── Experience
-│   ├── Projects
-│   ├── Skills
-│   ├── Certifications
-│   ├── Contact
-│   └── Footer
-│
 ├── types/
-│
 ├── .env.example
-├── .env.local
-├── package.json
-├── tsconfig.json
 └── README.md
 ```
 
 ---
 
-# Folder Explanation
+# Getting Started
 
-### app/
-
-Contains the Next.js App Router pages, layouts, SEO configuration, metadata generation, robots.txt, sitemap, and global styling.
-
-### components/
-
-Reusable UI components including buttons, cards, navigation, dialogs, language switcher, and theme toggle.
-
-### sections/
-
-Contains the major sections that build the portfolio page including Hero, About, Experience, Education, Projects, Skills, Certifications, Contact, and Footer.
-
-### lib/
-
-Contains third-party integrations including EmailJS, Cloudinary, Supabase, and reusable helper functions.
-
-### data/
-
-Stores structured portfolio data used throughout the application.
-
-### providers/
-
-Application-wide providers responsible for Theme management and Localization.
-
-### messages/
-
-Translation files used by next-intl for multilingual support.
-
-### public/
-
-Contains static assets including images, certificates, resumes, project screenshots, and icons.
-
-### types/
-
-Shared TypeScript interfaces and custom type declarations.
-
----
-
-# Featured Projects
-
-## Vital Guard
-
-An IoT-based wearable healthcare monitoring system designed for senior citizens and individuals with disabilities.
-
-**Technologies**
-
-- ESP8266
-- MPU6050
-- Blynk IoT
-- GPS
-- Embedded Systems
-
----
-
-## Video Anomaly Detection
-
-Deep learning-based surveillance anomaly detection using transfer learning and fine-tuning.
-
-**Technologies**
-
-- TensorFlow
-- Keras
-- OpenCV
-- Python
-- CNN
-
----
-
-## SMS Spam Detection
-
-Machine Learning model capable of detecting spam SMS messages using multiple classification algorithms.
-
-**Technologies**
-
-- Python
-- Scikit-Learn
-- TF-IDF
-- Logistic Regression
-- Naive Bayes
-- SVM
-
----
-
-# Contact Form Workflow
-
-```
-Visitor
-
-↓
-
-Contact Form
-
-↓
-
-EmailJS
-
-↓
-
-Configured Email Template
-
-↓
-
-Gmail Inbox
-
-↓
-
-Message Delivered
-```
-
----
-
-# Environment Variables
-
-Create a `.env.local` file in the project root.
-
-```env
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
-
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=
-
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=
-
-NEXT_PUBLIC_SUPABASE_URL=
-
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
-
-NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
-```
-
----
-
-# Local Installation
-
-Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Manikanta679/Manikanta-portfolio.git
-```
-
-Move into the project directory
-
-```bash
 cd Manikanta-portfolio
 ```
 
-Install dependencies
+---
+
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-Create environment variables
+---
 
-```bash
-cp .env.example .env.local
+### 3. Configure Environment Variables
+
+Create a `.env.local` file in the project root.
+
+Copy the values from:
+
+```text
+.env.example
 ```
 
-Run locally
+Then add your EmailJS credentials.
+
+Example:
+
+```env
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=YOUR_PUBLIC_KEY
+
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=YOUR_SERVICE_ID
+
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=YOUR_TEMPLATE_ID
+```
+
+---
+
+### 4. Start the Development Server
 
 ```bash
 npm run dev
 ```
 
-Open
+Visit:
 
 ```
 http://localhost:3000
@@ -378,103 +167,79 @@ http://localhost:3000
 
 # Available Scripts
 
-```bash
-npm run dev
-```
-
-Starts the development server.
-
----
-
-```bash
-npm run build
-```
-
-Creates the production build.
+| Command | Description |
+|----------|-------------|
+| npm run dev | Starts the development server |
+| npm run build | Creates the production build |
+| npm run start | Starts the production server |
+| npm run lint | Runs ESLint |
+| npm run typecheck | Performs TypeScript type checking |
+| npm run format | Formats the project using Prettier |
 
 ---
 
-```bash
-npm run start
-```
+# Internationalization
 
-Runs the production build.
+The portfolio supports multiple languages using **next-intl**.
+
+Current supported languages:
+
+- 🇺🇸 English
+- 🇩🇪 German
+
+Translation files are located inside:
+
+```
+messages/
+```
 
 ---
 
-```bash
-npm run lint
+# Contact Form
+
+The contact form is powered by **EmailJS**, allowing visitors to contact me directly without requiring a backend server.
+
+Required Environment Variables:
+
+```env
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
+NEXT_PUBLIC_EMAILJS_SERVICE_ID
+
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
 ```
-
-Runs ESLint.
-
----
-
-```bash
-npm run typecheck
-```
-
-Runs TypeScript type checking.
-
----
-
-```bash
-npm run format
-```
-
-Formats the code using Prettier.
 
 ---
 
 # Deployment
 
-The application is deployed using **Vercel**.
+The application is optimized for deployment on **Vercel**.
 
 Deployment Steps:
 
-1. Push the project to GitHub.
+1. Push the repository to GitHub.
 2. Import the repository into Vercel.
-3. Configure the required environment variables.
+3. Configure the required Environment Variables.
 4. Deploy.
-5. Every push to the main branch automatically triggers a production deployment.
+
+Live Website:
+
+### https://manikanta-portfolio-seven.vercel.app
 
 ---
 
-# Future Improvements
+# License
 
-- Blog Section
-- Admin Dashboard
-- Visitor Analytics
-- Project Filtering
-- Additional Languages
-- CMS Integration
-- Automated Email Responses
-- Performance Monitoring
+This project was created as a personal portfolio to showcase my work, technical skills, and professional experience.
+
+Feel free to explore the source code for learning and inspiration.
 
 ---
 
-# Author
+<div align="center">
 
-## Manikanta Engalligi
+### If you found this project useful, consider giving it a Star.
 
-AI Engineer | Full-Stack Developer | Data Analytics Enthusiast
+Made with ❤️ by **Manikanta Engalligi**
 
-**Portfolio**
-
-https://manikanta-portfolio-seven.vercel.app
-
-**GitHub**
-
-https://github.com/Manikanta679
-
-**LinkedIn**
-
-https://www.linkedin.com/in/manikanta-engalligi
-
----
-
-## License
-
-This project is intended for educational, professional, and portfolio purposes.
-
-© 2026 Manikanta Engalligi. All Rights Reserved.
+</div>
