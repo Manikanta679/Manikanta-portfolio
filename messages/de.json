@@ -1,11 +1,11 @@
 {
   "metadata": {
     "title": "Manikanta Engalligi — Portfolio",
-    "description": "Manikanta Engalligi — AI Engineer, Full-Stack-Entwickler und Data-Science-Enthusiast, der intelligente Systeme, skalierbare Webanwendungen und datengetriebene Lösungen entwickelt.",
-    "keywords": "Manikanta Engalligi, AI Engineer, Full Stack Entwickler, Data Science, Machine Learning, Next.js, TypeScript, React"
+    "description": "Manikanta Engalligi — AI Engineer | Full-Stack Developer | Data Analysis. Entwicklung intelligenter Systeme, skalierbarer Webanwendungen und datengetriebener Lösungen.",
+    "keywords": "Manikanta Engalligi, AI Engineer, Full-Stack Developer, Data Analysis, Machine Learning, Next.js, TypeScript, React"
   },
   "nav": {
-    "home": "Start",
+    "home": "Home",
     "about": "Über mich",
     "skills": "Fähigkeiten",
     "education": "Ausbildung",
@@ -17,7 +17,7 @@
   "hero": {
     "available": "Offen für neue Möglichkeiten",
     "name": "Manikanta Engalligi",
-    "headline": "AI Engineer | Full-Stack-Entwickler | Datenanalyse",
+    "headline": "AI Engineer | Full-Stack Developer | Data Analysis",
     "intro": "Ich entwickle intelligente Systeme, skalierbare Webanwendungen und datengetriebene Lösungen.",
     "viewProjects": "Projekte ansehen",
     "contactMe": "Kontakt aufnehmen",
@@ -74,7 +74,7 @@
     }
   },
   "skills": {
-    "title": "Fähigkeiten & Technologien",
+    "title": "Fähigkeiten",
     "subtitle": "Ein kuratierter Überblick über die Programmiersprachen, Frameworks, Plattformen und Engineering-Tools, die ich in KI, Full-Stack-Entwicklung, Data Analytics und Cloud-Anwendungen einsetze. Wähle eine Technologie, um zu sehen, wo sie angewendet wurde.",
     "categories": {
       "programming": "Programmiersprachen",
@@ -278,7 +278,7 @@
     }
   },
   "experience": {
-    "title": "Berufserfahrung",
+    "title": "Erfahrung",
     "labels": {
       "technologies": "Technologien",
       "responsibilities": "Aufgaben",
@@ -868,7 +868,7 @@
     }
   },
   "footer": {
-    "headline": "AI Engineer | Full-Stack-Entwickler | Data-Science-Enthusiast",
+    "headline": "AI Engineer | Full-Stack Developer | Data Analysis",
     "rights": "Alle Rechte vorbehalten."
   },
   "common": {

@@ -1,12 +1,12 @@
 {
   "metadata": {
     "title": "Manikanta Engalligi — Portfolio",
-    "description": "Manikanta Engalligi — AI Engineer, Full Stack Developer and Data Science enthusiast building intelligent systems, scalable web applications and data-driven solutions.",
-    "keywords": "Manikanta Engalligi, AI Engineer, Full Stack Developer, Data Science, Machine Learning, Next.js, TypeScript, React"
+    "description": "Manikanta Engalligi — AI Engineer | Full-Stack Developer | Data Analysis. Building intelligent systems, scalable web applications and data-driven solutions.",
+    "keywords": "Manikanta Engalligi, AI Engineer, Full-Stack Developer, Data Analysis, Machine Learning, Next.js, TypeScript, React"
   },
   "nav": {
     "home": "Home",
-    "about": "About",
+    "about": "About Me",
     "skills": "Skills",
     "education": "Education",
     "experience": "Experience",
@@ -17,7 +17,7 @@
   "hero": {
     "available": "Available for opportunities",
     "name": "Manikanta Engalligi",
-    "headline": "AI Engineer | Full-Stack Developer | Data Analytics",
+    "headline": "AI Engineer | Full-Stack Developer | Data Analysis",
     "intro": "Building intelligent systems, scalable web applications, and data-driven solutions.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me",
@@ -64,7 +64,7 @@
         },
         "kannada": {
           "name": "Kannada",
-          "level": "Native"
+          "level": "Mother Tongue"
         },
         "telugu": {
           "name": "Telugu",
@@ -74,7 +74,7 @@
     }
   },
   "skills": {
-    "title": "Skills & Technologies",
+    "title": "Skills",
     "subtitle": "A curated overview of the programming languages, frameworks, platforms and engineering tools I use across AI, Full-Stack Development, Data Analytics and Cloud-based applications. Select any technology to explore where it was applied.",
     "categories": {
       "programming": "Programming Languages",
@@ -278,7 +278,7 @@
     }
   },
   "experience": {
-    "title": "Professional Experience",
+    "title": "Experience",
     "labels": {
       "technologies": "Technologies",
       "responsibilities": "Responsibilities",
@@ -868,7 +868,7 @@
     }
   },
   "footer": {
-    "headline": "AI Engineer | Full Stack Developer | Data Science Enthusiast",
+    "headline": "AI Engineer | Full-Stack Developer | Data Analysis",
     "rights": "All rights reserved."
   },
   "common": {

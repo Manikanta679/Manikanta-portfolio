@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: `${siteConfig.name} — Portfolio`,
     short_name: siteConfig.shortName,
     description:
-      "Portfolio of Manikanta Engalligi — AI Engineer, Full Stack Developer and Data Science enthusiast building intelligent systems and scalable web applications.",
+      "Portfolio of Manikanta Engalligi — AI Engineer | Full-Stack Developer | Data Analysis. Building intelligent systems and scalable web applications.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
